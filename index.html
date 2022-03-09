@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STREETWEAR</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body class="grid-rows-3 bg-bricks">
+    <header class="bg-bricks">
+      <nav class="navbar flex-row container">
+        <div class="navbar__left flex-row">
+          <a href="index.html">
+            <picture class="logo flex-row">
+              <img
+                src="./assets/img/logo.png"
+                alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+              />
+            </picture>
+          </a>
+          <ul class="menu flex-row">
+            <li>
+              <a href="./assets/pages/products.html" class="menu__link"
+                >Productos</a
+              >
+            </li>
+            <li><a href="index.html#help" class="menu__link">Ayuda</a></li>
+            <li><a href="index.html#about" class="menu__link">Nosotros</a></li>
+            <li>
+              <a href="index.html#contact" class="menu__link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__right">
+          <ul class="menu flex-row">
+            <li class="dropdown-link">
+              <a class="menu__link"><i class="fas fa-user"></i></a>
+              <ul class="sub-menu bg-bricks">
+                <li>
+                  <a href="./assets/pages/login.html" class="sub-menu__link"
+                    >Ingresar</a
+                  >
+                </li>
+                <li>
+                  <a href="./assets/pages/register.html" class="sub-menu__link"
+                    >Registrarse</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./assets/pages/cart.html" class="menu__link"
+                ><i class="fas fa-shopping-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcome" class="flex-row">
+        <a
+          type="button"
+          class="btn-principal"
+          href="./assets/pages/products.html"
+          ><i class="fas fa-shopping-bag me-2"></i> Comprar ahora</a
+        >
+      </section>
+
+      <section id="categories" class="container">
+        <div class="flex-row" data-aos="fade-right" data-aos-duration="3000">
+          <article class="flex-column">
+            <img src="./assets/img/hanger.png" alt="#" />
+            <button class="btn-secundario">Abrigos</button>
+          </article>
+          <article class="flex-column">
+            <img src="./assets/img/hanger.png" alt="#" />
+            <button class="btn-secundario">Remeras</button>
+          </article>
+          <article class="flex-column">
+            <img src="./assets/img/hanger.png" alt="#" />
+            <button class="btn-secundario">Pantalones</button>
+          </article>
+        </div>
+        <div class="flex-row" data-aos="fade-up" data-aos-duration="3000">
+          <a
+            href="./assets/pages/products.html"
+            type="button"
+            class="btn-principal"
+            >Ver todos los productos</a
+          >
+        </div>
+      </section>
+
+      <section id="help" class="container">
+        <div class="flex-row" data-aos="fade-left" data-aos-duration="3000">
+          <div class="help__icons flex-column">
+            <i class="fas fa-shopping-cart text-white pe-4 py-3 pb-lg-0"></i>
+            <i class="fas fa-question mt-2 mb-3 mb-md-0"></i>
+          </div>
+          <article class="help__content flex-column">
+            <h2 class="title-primary">¿Cómo compro?</h2>
+            <div class="help__list">
+              <div class="flex-row">
+                <span>1</span>
+                <p>
+                  Elegí el producto, el talle, y hacé click en Agregar al
+                  carrito.
+                </p>
+              </div>
+              <div class="flex-row">
+                <span>2</span>
+                <p>
+                  Si querés, podes seguir agregando otros productos al carrito,
+                  sino, hacé clic en Iniciar Compra. En este paso vas a poder
+                  calcular el costo de envío.
+                </p>
+              </div>
+              <div class="flex-row">
+                <span>3</span>
+                <p>
+                  Completá tus datos de contacto (y de facturación en caso de
+                  que lo requieras) y hace clic en Continuar.
+                </p>
+              </div>
+              <div class="flex-row">
+                <span>4</span>
+                <p>
+                  Selecciona el método de envío que desees (envíos a todo el
+                  país por Correo o A Coordinar), completá los datos del mismo y
+                  hace clic en Continuar.
+                </p>
+              </div>
+              <div class="flex-row">
+                <span>5</span>
+                <p>
+                  Elegí el método de pago que prefieras (por efectivo seleccioná
+                  Pago Facil o Rapipago), rellená los datos solicitados para
+                  realizar la compra y hacé clic en Finalizar.
+                </p>
+              </div>
+              <div class="flex-row">
+                <span>6</span>
+                <p>
+                  Listo! Revisá tu correo que en unos minutos va a llegar toda
+                  la información correspondiente a tu compra y el envío de la
+                  misma.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <div class="flex-row" data-aos="fade-right" data-aos-duration="3000">
+          <article class="about__content flex-column">
+            <h2 class="title-primary">¿Quiénes Somos?</h2>
+            <ul>
+              <h3>Nosotros</h3>
+              <li>
+                Somos Diego Percaz y Joaquín Arias, de Arroyito Córdoba para
+                todo el mundo.
+              </li>
+              <h3>Inicios</h3>
+              <li>
+                En un principio arrancamos con esto para traer ropa que no se
+                conseguía accesiblemente en nuestro pueblo, por lo que empezamos
+                a salir a buscar prendas a nuestro gusto y de pasó ir conociendo
+                el mundo de la moda urbana.
+              </li>
+              <h3>Actualidad</h3>
+              <li>
+                Ahora nuestros clientes objetivos no son sólo los de nuestro
+                pueblo, sino que logramos una fidelidad con amigos de todo el
+                país. A futuro tenemos planeado ingresar en el mundo del diseño
+                y fabricación de prendas propias.
+              </li>
+            </ul>
+          </article>
+          <div class="about__icons flex-column">
+            <img
+              src="./assets/img/logo.png"
+              alt="Logo de la tienda en color blanco y amarillo"
+            />
+            <i class="fas fa-info"></i>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container">
+        <article class="flex-row" data-aos="fade-up" data-aos-duration="3000">
+          <h2 class="title-primary vertical">Contactános</h2>
+          <form class="form__paper">
+            <div class="input__box">
+              <label for="name" class="form__label">Nombre y Apellido</label>
+              <input type="text" id="name" class="form__input" required="" />
+            </div>
+            <div class="input__box">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" class="form__input" required="" />
+            </div>
+            <div class="input__box">
+              <label for="message" class="form__label">Mensaje</label>
+              <textarea
+                id="message"
+                class="form__input"
+                rows="6"
+                column="10"
+                required=""
+              ></textarea>
+            </div>
+            <input type="submit" value="Enviar" class="btn-principal" />
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <section id="prueba">
+      <h2>Seccion de Prueba para GIT</h2>
+    </section>
+
+    <footer>
+      <div class="container flex-column">
+        <div class="footer__info flex-row">
+          <a href="./index.html"><i class="fas fa-home"></i></a>
+
+          <div class="footer__payment flex-column">
+            <h4>Todos los métodos de pago</h4>
+            <div class="icons flex-row">
+              <i class="fas fa-money-bill-wave"></i>
+              <i class="fas fa-credit-card"></i>
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+          </div>
+          <div class="footer__logo flex-column">
+            <span>STREET</span>
+            <span>WEAR</span>
+          </div>
+          <h4>&copy; 2022 Derechos Reservados</h4>
+          <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
+
+        <div class="footer__social flex-row">
+          <a href="#" class="fab fa-facebook"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fa fa-share"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>

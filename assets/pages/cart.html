@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STREETWEAR | Carrito</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body class="grid-rows-4">
+    <header class="bg-bricks">
+      <nav class="navbar flex-row container">
+        <div class="navbar__left flex-row">
+          <a href="../../index.html">
+            <picture class="logo flex-row">
+              <img
+                src="../img/logo.png"
+                alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+              />
+            </picture>
+          </a>
+          <ul class="menu flex-row">
+            <li>
+              <a href="products.html" class="menu__link">Productos</a>
+            </li>
+            <li>
+              <a href="../../index.html#help" class="menu__link">Ayuda</a>
+            </li>
+            <li>
+              <a href="../../index.html#about" class="menu__link">Nosotros</a>
+            </li>
+            <li>
+              <a href="../../index.html#contact" class="menu__link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__right">
+          <ul class="menu flex-row">
+            <li class="dropdown-link">
+              <a class="menu__link"><i class="fas fa-user"></i></a>
+              <ul class="sub-menu bg-bricks">
+                <li>
+                  <a href="login.html" class="sub-menu__link">Iniciar Sesión</a>
+                </li>
+                <li>
+                  <a href="register.html" class="sub-menu__link"
+                    >Crear Cuenta</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="cart.html" class="menu__link"
+                ><i class="fas fa-shopping-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="cart" class="container">
+        <h1 class="title-primary">Iniciar Compra</h1>
+        <div class="flex-row jc-between">
+          <article class="cart__data flex-column">
+            <div class="cart__ship">
+              <h2 class="text-leftline">Entrega</h2>
+              <p class="flex-row jc-between algn-items-center">
+                Correo Argentino - Envío a Domicilio
+                <span class="text-overline">$ 475</span>
+              </p>
+            </div>
+            <div class="cart__personal">
+              <h2 class="text-leftline">Datos del Destinatario</h2>
+              <p>
+                ¿Ya tenes cuenta?
+                <a href="./login.html" class="text-accent">¡Iniciá sesión!</a>
+              </p>
+              <input
+                type="email"
+                name="email"
+                class="form__input"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                name="name"
+                class="form__input"
+                placeholder="Nombre y Apellido"
+              />
+              <div class="flex-row jc-between">
+                <input
+                  type="number"
+                  name="codpostal"
+                  class="form__input"
+                  placeholder="Cód. Postal"
+                />
+                <select name="provincia" class="form__input">
+                  <option value="cba" selected disabled>Provincia</option>
+                  <option value="cba">Córdoba</option>
+                  <option value="bsas">Buenos Aires</option>
+                  <option value="stafe">Santa Fe</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                name="adress"
+                class="form__input"
+                placeholder="Domicilio"
+              />
+              <input
+                type="text"
+                name="dpto"
+                class="form__input"
+                placeholder="Departamento (opcional)"
+              />
+              <input
+                type="number"
+                name="tel"
+                class="form__input"
+                placeholder="Télefono"
+              />
+            </div>
+            <div class="cart__fact">
+              <h2 class="text-leftline">Datos de Facturación</h2>
+              <input
+                type="number"
+                name="dni"
+                class="form__input"
+                placeholder="DNI ó CUIL"
+              />
+              <div class="checkbox__box">
+                <input type="checkbox" name="check" />
+                <label for="check"
+                  >Mis datos de facturación y entrega son los mismos
+                </label>
+              </div>
+            </div>
+            <button class="btn-principal">
+              <i class="fas fa-money-bill-wave"></i> Continuar al pago
+            </button>
+          </article>
+          <article class="cart__resume flex-column">
+            <div class="cart__product flex-row algn-items-center">
+              <div class="cart__product__img">
+                <img src="../img/img-ejemplo.png" alt="" />
+              </div>
+              <div class="cart__product__info flex-column">
+                <h3 class="text-underlined">Nombre del producto</h3>
+                <p>Talle S, Negro</p>
+                <h3>$ 1000</h3>
+              </div>
+            </div>
+            <div class="cart__product flex-row algn-items-center">
+              <div class="cart__product__img">
+                <img src="../img/img-ejemplo.png" alt="" />
+              </div>
+              <div class="cart__product__info flex-column">
+                <h3 class="text-underlined">Nombre del producto</h3>
+                <p>Talle S, Negro</p>
+                <h3>$ 1000</h3>
+              </div>
+            </div>
+            <div class="cart__subtotal flex-column">
+              <h4 class="flex-row jc-between algn-items-center">
+                Subtotal <span>$ 2000</span>
+              </h4>
+              <h4 class="flex-row jc-between algn-items-center">
+                Costo de Envío <span>$ 475</span>
+              </h4>
+            </div>
+            <div class="cart__total flex-row jc-between algn-items-center">
+              <h2 class="text-overline">TOTAL</h2>
+              <h2 class="text-overline">$ 2475</h2>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section id="interes" class="bg-bricks">
+      <div class="container">
+        <h2 class="title-secondary">Quizá quieras agregar...</h2>
+        <div class="interes__slide flex-row">
+          <i class="fa-solid fa-angle-left"></i>
+          <i class="fa-solid fa-angle-right"></i>
+          <article class="product">
+            <a href="./product.html">
+              <div class="product__img">
+                <img src="../img/tshirt 2.jpg" />
+              </div>
+              <div class="product__info">
+                <h4 class="product__title">Remera F*cking Awesome</h4>
+                <h4 class="product__price">$ 2499</h4>
+                <div class="product__btn flex-row">
+                  <button class="btn-cart">
+                    Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="product ganga">
+            <a href="./product.html">
+              <span class="offer">GANGA!</span>
+              <div class="product__img">
+                <img src="../img/campera.jpg" alt="Imágen gris de ejemplo" />
+              </div>
+              <div class="product__info">
+                <h4 class="product__title">Campera de Jean Levis</h4>
+                <h4 class="product__price">$ 3700<span>$ 5000</span></h4>
+
+                <div class="product__btn flex-row">
+                  <button class="btn-cart">
+                    Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container flex-column">
+        <div class="footer__info flex-row">
+          <a href="../../index.html"><i class="fas fa-home"></i></a>
+
+          <div class="footer__payment flex-column">
+            <h4>Todos los métodos de pago</h4>
+            <div class="icons flex-row">
+              <i class="fas fa-money-bill-wave"></i>
+              <i class="fas fa-credit-card"></i>
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+          </div>
+          <div class="footer__logo flex-column">
+            <span>STREET</span><span>WEAR</span>
+          </div>
+          <h4>&copy; 2022 Derechos Reservados</h4>
+          <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
+
+        <div class="footer__social flex-row">
+          <a href="#" class="fab fa-facebook"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fa fa-share"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

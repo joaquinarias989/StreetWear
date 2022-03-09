@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STREETWEAR | Crear cuenta</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body class="grid-rows-3 bg-bricks">
+    <header class="bg-bricks">
+      <nav class="navbar flex-row container">
+        <div class="navbar__left flex-row">
+          <a href="../../index.html">
+            <picture class="logo flex-row">
+              <img
+                src="../img/logo.png"
+                alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+              />
+            </picture>
+          </a>
+          <ul class="menu flex-row">
+            <li>
+              <a href="products.html" class="menu__link">Productos</a>
+            </li>
+            <li>
+              <a href="../../index.html#help" class="menu__link">Ayuda</a>
+            </li>
+            <li>
+              <a href="../../index.html#about" class="menu__link">Nosotros</a>
+            </li>
+            <li>
+              <a href="../../index.html#contact" class="menu__link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__right">
+          <ul class="menu flex-row">
+            <li class="dropdown-link">
+              <a class="menu__link"><i class="fas fa-user"></i></a>
+              <ul class="sub-menu bg-bricks">
+                <li>
+                  <a href="login.html" class="sub-menu__link">Iniciar Sesión</a>
+                </li>
+                <li>
+                  <a href="register.html" class="sub-menu__link"
+                    >Crear Cuenta</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="cart.html" class="menu__link"
+                ><i class="fas fa-shopping-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="register" class="container">
+        <h1 class="title-primary">Crear Cuenta</h1>
+        <p class="text-leftline">
+          Comprá más rápido y llevá el control de tus pedidos, ¡en un solo
+          lugar!
+        </p>
+        <div class="row flex-row jc-between">
+          <form class="form__paper">
+            <div class="input__box">
+              <label for="name" class="form__label">Nombre y Apellido</label>
+              <input type="text" id="name" class="form__input" required />
+            </div>
+            <div class="input__box flex-row">
+              <div class="codpostal">
+                <label for="codpostal" class="form__label">Cód. Postal</label>
+                <input
+                  type="number"
+                  id="codpostal"
+                  class="form__input"
+                  required
+                />
+              </div>
+              <div class="prov">
+                <label for="provincia" class="form__label">Provincia</label>
+                <select name="provincia" class="form__input">
+                  <option selected disabled></option>
+                  <option value="cba">Córdoba</option>
+                  <option value="bsas">Buenos Aires</option>
+                  <option value="stafe">Santa Fe</option>
+                </select>
+              </div>
+            </div>
+            <div class="input__box">
+              <label for="domicilio" class="form__label">Domicilio</label>
+              <input type="text" id="domicilio" class="form__input" required />
+            </div>
+            <div class="input__box">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" class="form__input" required />
+            </div>
+            <div class="input__box">
+              <label for="password" class="form__label">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                class="form__input"
+                required
+              />
+            </div>
+            <input type="submit" class="btn-principal" value="Crear Cuenta" />
+            <p>
+              ¿Ya tenes cuenta?
+              <a href="./register.html" class="text-accent">¡Iniciá sesión!</a>
+            </p>
+          </form>
+          <div class="icons flex-column jc-center algn-items-center">
+            <i class="fa-solid fa-user-plus"></i>
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container flex-column">
+        <div class="footer__info flex-row">
+          <a href="../../index.html"><i class="fas fa-home"></i></a>
+
+          <div class="footer__payment flex-column">
+            <h4>Todos los métodos de pago</h4>
+            <div class="icons flex-row">
+              <i class="fas fa-money-bill-wave"></i>
+              <i class="fas fa-credit-card"></i>
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+          </div>
+          <div class="footer__logo flex-column">
+            <span>STREET</span><span>WEAR</span>
+          </div>
+          <h4>&copy; 2022 Derechos Reservados</h4>
+          <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
+
+        <div class="footer__social flex-row">
+          <a href="#" class="fab fa-facebook"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fa fa-share"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

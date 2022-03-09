@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STREETWEAR | Producto</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body class="grid-rows-4 bg-light">
+    <header class="bg-bricks">
+      <nav class="navbar flex-row container">
+        <div class="navbar__left flex-row">
+          <a href="../../index.html">
+            <picture class="logo flex-row">
+              <img
+                src="../img/logo.png"
+                alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+              />
+            </picture>
+          </a>
+          <ul class="menu flex-row">
+            <li>
+              <a href="products.html" class="menu__link">Productos</a>
+            </li>
+            <li>
+              <a href="../../index.html#help" class="menu__link">Ayuda</a>
+            </li>
+            <li>
+              <a href="../../index.html#about" class="menu__link">Nosotros</a>
+            </li>
+            <li>
+              <a href="../../index.html#contact" class="menu__link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__right">
+          <ul class="menu flex-row">
+            <li class="dropdown-link">
+              <a class="menu__link"><i class="fas fa-user"></i></a>
+              <ul class="sub-menu bg-bricks">
+                <li>
+                  <a href="login.html" class="sub-menu__link">Iniciar Sesión</a>
+                </li>
+                <li>
+                  <a href="register.html" class="sub-menu__link"
+                    >Crear Cuenta</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="cart.html" class="menu__link"
+                ><i class="fas fa-shopping-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="product" class="container">
+        <div class="section__header">
+          <div>
+            <h1 class="title-underlined">Nombre del Producto</h1>
+
+            <ol class="breadcrumb">
+              <li><a href="../../index.html">Inicio</a></li>
+              <span class="breadcrumb__divider">></span>
+              <li><a href="products.html">Productos</a></li>
+              <span class="breadcrumb__divider">></span>
+              <li>Nombre del Producto</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="product__header">
+          <h2>$ 1000</h2>
+          <div class="flex-row jc-between">
+            <div class="product__discount flex-column">
+              <h5>
+                <i class="fas fa-credit-card"></i>
+                <span class="text-accent"> 3 cuotas sin interés</span>
+                de $ 333,33
+              </h5>
+              <h5>
+                <i class="fas fa-money-bill-wave"></i>
+                <span class="text-accent"> 15% de descuento</span>
+                pagando en efectivo
+              </h5>
+            </div>
+            <div class="product__ship flex-row jc-between">
+              <input type="number" placeholder="Cód. Postal" />
+              <button><i class="fa-solid fa-truck"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__main flex-row jc-between">
+          <div class="product__img">
+            <img src="../img/shirt yellow.jpg" alt="Imágen gris de ejemplo" />
+          </div>
+          <div class="product__details flex-column">
+            <p class="product__description">
+              Este producto es ideal para ésta temporada. Innovador y muy
+              estiloso. Sin irse por las ramas ni tampoco caer en lo básico. Si
+              querés darle un cambio de look a tu persona manteniendo la
+              elegancia, ésta prenda es para vos!
+            </p>
+            <div
+              class="product__preferences flex-row jc-between algn-items-center"
+            >
+              <select name="color">
+                <option selected disabled>Color</option>
+                <option value="value1">Blanco</option>
+                <option value="value2">Negro</option>
+                <option value="value3">Amarillo</option>
+              </select>
+              <select name="talle">
+                <option selected disabled>Talle</option>
+                <option value="value1">S</option>
+                <option value="value2">M</option>
+                <option value="value3">L</option>
+              </select>
+            </div>
+            <div class="product__sizes">
+              <img src="../img/medidas.png" alt="" />
+            </div>
+            <div
+              class="product__quantity flex-row jc-between algn-items-center"
+            >
+              <button class="btn-quantity">-</button>
+              <input type="number" value="0" />
+              <button class="btn-quantity">+</button>
+            </div>
+            <button class="btn-principal">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="interes" class="bg-bricks">
+      <div class="container">
+        <h2 class="title-secondary">Te puede interesar...</h2>
+        <div class="interes__slide flex-row">
+          <i class="fa-solid fa-angle-left"></i>
+          <i class="fa-solid fa-angle-right"></i>
+          <article class="product">
+            <a href="./product.html">
+              <div class="product__img">
+                <img src="../img/tshirt 2.jpg" />
+              </div>
+              <div class="product__info">
+                <h4 class="product__title">Remera F*cking Awesome</h4>
+                <h4 class="product__price">$ 2499</h4>
+                <div class="product__btn flex-row">
+                  <button class="btn-cart">
+                    Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="product ganga">
+            <a href="./product.html">
+              <span class="offer">GANGA!</span>
+              <div class="product__img">
+                <img src="../img/campera.jpg" alt="Imágen gris de ejemplo" />
+              </div>
+              <div class="product__info">
+                <h4 class="product__title">Campera de Jean Levis</h4>
+                <h4 class="product__price">$ 3700<span>$ 5000</span></h4>
+
+                <div class="product__btn flex-row">
+                  <button class="btn-cart">
+                    Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container flex-column">
+        <div class="footer__info flex-row">
+          <a href="../../index.html"><i class="fas fa-home"></i></a>
+
+          <div class="footer__payment flex-column">
+            <h4>Todos los métodos de pago</h4>
+            <div class="icons flex-row">
+              <i class="fas fa-money-bill-wave"></i>
+              <i class="fas fa-credit-card"></i>
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+          </div>
+          <div class="footer__logo flex-column">
+            <span>STREET</span><span>WEAR</span>
+          </div>
+          <h4>&copy; 2022 Derechos Reservados</h4>
+          <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
+
+        <div class="footer__social flex-row">
+          <a href="#" class="fab fa-facebook"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fa fa-share"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
