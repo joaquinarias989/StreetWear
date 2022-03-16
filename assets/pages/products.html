@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STREETWEAR | Productos</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -16,19 +22,33 @@
   </head>
   <body class="grid-rows-3 bg-light">
     <header class="bg-bricks">
-      <nav class="navbar flex-row container">
-        <div class="navbar__left flex-row">
-          <a href="../../index.html">
-            <picture class="logo flex-row">
-              <img
-                src="../img/logo.png"
-                alt="Logo de la tienda StreetWear, en color blanco y amarillo"
-              />
-            </picture>
-          </a>
-          <ul class="menu flex-row">
+      <nav class="navbar container flex-row navbar-expand-lg navbar-light">
+        <a href="../../index.html">
+          <picture class="logo flex-row">
+            <img
+              src="../img/logo.png"
+              alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+            />
+          </picture>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="btnMenu"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-lg-auto">
             <li>
-              <a href="products.html" class="menu__link">Productos</a>
+              <a href="products.html" class="menu__link menu__link--active"
+                >Productos</a
+              >
             </li>
             <li>
               <a href="../../index.html#help" class="menu__link">Ayuda</a>
@@ -40,11 +60,11 @@
               <a href="../../index.html#contact" class="menu__link">Contacto</a>
             </li>
           </ul>
-        </div>
-        <div class="navbar__right">
-          <ul class="menu flex-row">
+          <ul class="navbar-nav mb-2 mb-lg-0 flex-row jc-between">
             <li class="dropdown-link">
-              <a class="menu__link"><i class="fas fa-user"></i></a>
+              <a class="menu__link" role="button"
+                ><i class="fas fa-user text-white"></i
+              ></a>
               <ul class="sub-menu bg-bricks">
                 <li>
                   <a href="login.html" class="menu__link">Ingresar</a>
@@ -56,7 +76,7 @@
             </li>
             <li>
               <a href="cart.html" class="menu__link"
-                ><i class="fas fa-shopping-bag"></i
+                ><i class="fas fa-shopping-bag text-white"></i
               ></a>
             </li>
           </ul>
@@ -66,8 +86,8 @@
 
     <main>
       <section id="products" class="container">
-        <div class="section__header">
-          <div>
+        <div class="section__header row">
+          <div class="col-md-10">
             <h1 class="title-primary">Productos</h1>
             <ol class="breadcrumb">
               <li><a href="../../index.html">Inicio</a></li>
@@ -75,12 +95,149 @@
               <li>Productos</li>
             </ol>
           </div>
-          <div class="filter">
-            <i class="fa-solid fa-filter"></i>
+          <div class="col-md-2 d-flex justify-content-end align-items-start">
+            <button
+              class=""
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasScrolling"
+              aria-controls="offcanvasScrolling"
+            >
+              <i class="fa-solid fa-filter"></i>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+              tabindex="-1"
+              id="offcanvasScrolling"
+              aria-labelledby="offcanvasScrollingLabel"
+            >
+              <div class="offcanvas-header">
+                <p class="h2 fw-bold" id="offcanvasScrollingLabel">
+                  ¿Qué estas buscando?
+                </p>
+                <button
+                  type="button"
+                  class="btn-close text-reset"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="list-group">
+                  <p class="fw-bold" id="offcanvasScrollingLabel">Categoría</p>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    Remeras
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    Pantalones
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    Buzos
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    Camperas
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    Accesorios
+                  </li>
+                </ul>
+                <ul class="list-group mt-4">
+                  <p class="fw-bold" id="offcanvasScrollingLabel">Talle</p>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    S
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    M
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    L
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    XL
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    XXL
+                  </li>
+                  <li>
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value=""
+                      aria-label="..."
+                    />
+                    Oversize
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="products__list flex-row algn-items-center">
+        <div
+          class="products__list d-flex algin-items-center justify-content-center justify-content-md-start"
+        >
           <article class="product">
             <a href="./product.html">
               <div class="product__img">
@@ -193,8 +350,8 @@
     </main>
 
     <footer>
-      <div class="container flex-column">
-        <div class="footer__info flex-row">
+      <div class="container">
+        <div class="footer__info flex-column flex-md-row">
           <a href="../../index.html"><i class="fas fa-home"></i></a>
 
           <div class="footer__payment flex-column">
@@ -221,4 +378,9 @@
       </div>
     </footer>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
 </html>
