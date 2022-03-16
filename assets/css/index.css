@@ -46,8 +46,21 @@ html {
   scroll-padding-top: 7rem;
   scroll-behavior: smooth;
 }
-ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.15;
+}
+ul,
+ol {
   list-style-type: none;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -271,32 +284,25 @@ header {
   padding: 1rem 0;
   overflow: visible;
 }
-.navbar .navbar__left,
-.navbar .navbar__right {
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.navbar .navbar__left .logo {
+.navbar .logo {
   align-items: center;
   justify-content: center;
-  margin-right: 1rem;
   width: 130px;
+  margin-right: 1rem;
 }
-.navbar .menu {
-  flex-wrap: wrap;
-}
-.navbar .menu .menu__link {
-  color: var(--white);
+.navbar .navbar-nav {
   font-size: 1.7em;
+}
+.navbar .navbar-nav .menu__link {
+  color: var(--white);
   font-weight: bold;
   text-transform: lowercase;
   letter-spacing: 1px;
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
   margin: 0 0.5rem;
   position: relative;
 }
-.navbar .menu .menu__link::after {
+.navbar .navbar-nav .menu__link::after {
   content: "";
   position: absolute;
   height: 0;
@@ -308,33 +314,40 @@ header {
   margin: auto;
   transition: height 0.2s ease-out, background 0.5s ease-out;
 }
-.navbar .menu .menu__link:hover::after {
+.navbar .navbar-nav .menu__link:hover::after {
   height: 50%;
   width: 3px;
   background: var(--primary);
 }
-.navbar .navbar__right {
+.navbar .navbar-nav i {
+  font-size: 1.2em;
+}
+.navbar .dropdown-link {
   position: relative;
 }
-.navbar .navbar__right .menu i {
-  font-size: 1.3em;
-}
-.navbar .navbar__right .sub-menu {
+.navbar .sub-menu {
   display: none;
   position: absolute;
   top: 5rem;
-  right: 0;
+  left: -2rem;
+  padding: 0 1rem 0 0.5rem;
   border-bottom: 5px solid var(--primary);
   z-index: 100;
 }
-.navbar .navbar__right .dropdown-link:hover .sub-menu {
+.navbar .sub-menu .menu__link {
+  padding: 1rem;
+}
+.navbar .dropdown-link:hover .sub-menu {
   display: block;
+}
+#btnMenu {
+  font-size: 2em;
 }
 
 /*   WELCOME   */
 
 #welcome {
-  height: calc(100vh - 78.55px);
+  height: calc(100vh - 74.05px);
   justify-content: center;
   align-items: center;
   background: url(../img/welcome-garage-2.jpg) center center fixed no-repeat;
@@ -370,15 +383,10 @@ header {
 #help {
   padding: 5rem 0;
 }
-#help > .flex-row {
-  justify-content: space-between;
-  align-items: center;
+#help .row {
   flex-wrap: wrap-reverse;
-  gap: 2rem;
 }
 #help .help__icons {
-  flex-basis: 10%;
-  align-items: center;
   font-size: 7.5em;
   gap: 2rem;
 }
@@ -389,11 +397,6 @@ header {
 #help .help__icons .fa-question {
   color: var(--primary);
   transform: rotate(10deg);
-}
-#help .help__content {
-  flex-basis: 80%;
-  justify-content: end;
-  align-items: flex-end;
 }
 #help .help__content h2 {
   transform: rotate(5deg);
@@ -413,7 +416,7 @@ header {
   border-radius: 2px;
   line-height: 1.8em;
 }
-#help .help__list .flex-row {
+#help .help__list .d-flex {
   align-items: center;
   justify-content: start;
   gap: 1rem;
@@ -440,7 +443,7 @@ header {
   z-index: -10;
   transition: all 0.3s ease-out;
 }
-#help .help__list div:hover span::after {
+#help .help__list .d-flex:hover span::after {
   width: 70%;
 }
 #help .help__list p {
@@ -452,16 +455,6 @@ header {
 #about {
   padding: 5rem 0;
 }
-#about .flex-row {
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-#about .about__content {
-  flex-basis: 70%;
-  align-items: flex-start;
-}
 #about .about__content h2 {
   transform: rotate(-3deg);
   z-index: 30;
@@ -470,7 +463,6 @@ header {
   background: var(--light-color);
   font-size: 1.7em;
   padding: 1rem 2rem;
-  margin-left: 4rem;
   box-shadow: 10px 10px 8px #1f1f1f7e;
   border-radius: 2px;
 }
@@ -478,10 +470,7 @@ header {
   margin: 0.5rem 0 1rem 0;
 }
 #about .about__icons {
-  flex-basis: 25%;
   color: var(--primary);
-  justify-content: center;
-  align-items: center;
   font-size: 5em;
   gap: 2rem;
 }
@@ -1027,29 +1016,44 @@ footer .footer__social a {
 
 @media screen and (max-width: 1319px) {
   #help .help__icons {
-    flex-basis: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
     gap: 5rem;
-  }
-  #help .help__content {
-    flex-basis: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0;
+    margin-top: 8rem;
   }
   #help .help__content h2 {
     width: 100%;
     transform: rotate(0);
-    padding: 0.2rem 0;
   }
   #help .help__content .help__list {
     margin: 0;
   }
   #cart .cart__resume {
     flex-basis: 45%;
+  }
+}
+
+@media (max-width: 991px) {
+  #navbarSupportedContent.collapse.show {
+    height: calc(100vh - 74.05px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #navbarSupportedContent.collapsing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navbar .navbar-nav {
+    text-align: center;
+    font-size: 4em;
+    width: 100%;
+  }
+  .navbar .sub-menu {
+    font-size: 0.7em;
+    top: 8rem;
+    left: 0;
   }
 }
 
@@ -1064,25 +1068,11 @@ footer .footer__social a {
   .title-primary.vertical {
     width: auto;
   }
-  #about .about__content {
-    flex-basis: 100%;
-    justify-content: center;
-    align-items: center;
-  }
   #about .about__content h2 {
-    width: 100%;
     transform: rotate(0);
-    padding: 0.2rem 0;
-  }
-  #about .about__content ul {
-    margin: 0;
   }
   #about .about__icons {
-    flex-basis: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
     gap: 5rem;
   }
   #contact .form__paper {
@@ -1094,10 +1084,8 @@ footer .footer__social a {
     grid-template-rows: repeat(6, 1fr);
   }
   footer .footer__info {
-    flex-direction: column;
     gap: 2rem;
     position: relative;
-    flex-basis: 100%;
   }
   footer .footer__info a {
     position: absolute;
@@ -1149,7 +1137,7 @@ footer .footer__social a {
 
 @media screen and (max-width: 425px) {
   #help .help__list {
-    padding: 0 0.5rem;
+    padding: 0 0.1rem;
   }
   #contact article {
     flex-direction: column;
