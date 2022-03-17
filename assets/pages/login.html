@@ -87,29 +87,37 @@
     <main>
       <section id="login" class="container">
         <h1 class="title-primary">Iniciar Sesión</h1>
-        <div class="row flex-row jc-between">
-          <form class="form__paper">
-            <div class="input__box">
-              <label for="email" class="form__label">Email</label>
-              <input type="email" id="email" class="form__input" required />
-            </div>
-            <div class="input__box">
-              <label for="password" class="form__label">Contraseña</label>
+        <div class="row justify-content-between mt-5">
+          <div class="col-md-7 col-lg-6">
+            <form class="form__paper">
+              <div class="input__box">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" id="email" class="form__input" required />
+              </div>
+              <div class="input__box">
+                <label for="password" class="form__label">Contraseña</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form__input"
+                  required
+                />
+              </div>
+              <a href="#" class="text-accent">¿Olvidaste tu contraseña?</a>
               <input
-                type="password"
-                id="password"
-                class="form__input"
-                required
+                type="submit"
+                class="btn-principal"
+                value="Iniciar sesión"
               />
-            </div>
-            <a href="#" class="text-accent">¿Olvidaste tu contraseña?</a>
-            <input type="submit" class="btn-principal" value="Iniciar sesión" />
-            <p>
-              ¿No tenes cuenta?
-              <a href="./register.html" class="text-accent">¡Creála!</a>
-            </p>
-          </form>
-          <div class="icons flex-column jc-center algn-items-center">
+              <p>
+                ¿No tenes cuenta?
+                <a href="./register.html" class="text-accent">¡Creála!</a>
+              </p>
+            </form>
+          </div>
+          <div
+            class="icons col-md-3 d-flex flex-md-column justify-content-center align-items-center mt-5 mt-md-0"
+          >
             <i class="fa-solid fa-user"></i>
             <i class="fa-solid fa-door-open"></i>
           </div>

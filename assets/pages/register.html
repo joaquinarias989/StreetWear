@@ -91,58 +91,67 @@
           Comprá más rápido y llevá el control de tus pedidos, ¡en un solo
           lugar!
         </p>
-        <div class="row flex-row jc-between">
-          <form class="form__paper">
-            <div class="input__box">
-              <label for="name" class="form__label">Nombre y Apellido</label>
-              <input type="text" id="name" class="form__input" required />
-            </div>
-            <div class="input__box flex-row">
-              <div class="codpostal">
-                <label for="codpostal" class="form__label">Cód. Postal</label>
+        <div class="row justify-content-between mt-5">
+          <div class="col-md-9 col-xl-6">
+            <form class="form__paper">
+              <div class="input__box">
+                <label for="name" class="form__label">Nombre y Apellido</label>
+                <input type="text" id="name" class="form__input" required />
+              </div>
+              <div class="input__box flex-column flex-md-row w-100">
+                <div class="codpostal w-100 w-md-50">
+                  <label for="codpostal" class="form__label">Cód. Postal</label>
+                  <input
+                    type="number"
+                    id="codpostal"
+                    class="form__input"
+                    required
+                  />
+                </div>
+                <div class="prov w-100 w-md-50">
+                  <label for="provincia" class="form__label">Provincia</label>
+                  <select name="provincia" class="form__input">
+                    <option selected disabled></option>
+                    <option value="cba">Córdoba</option>
+                    <option value="bsas">Buenos Aires</option>
+                    <option value="stafe">Santa Fe</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input__box">
+                <label for="domicilio" class="form__label">Domicilio</label>
                 <input
-                  type="number"
-                  id="codpostal"
+                  type="text"
+                  id="domicilio"
                   class="form__input"
                   required
                 />
               </div>
-              <div class="prov">
-                <label for="provincia" class="form__label">Provincia</label>
-                <select name="provincia" class="form__input">
-                  <option selected disabled></option>
-                  <option value="cba">Córdoba</option>
-                  <option value="bsas">Buenos Aires</option>
-                  <option value="stafe">Santa Fe</option>
-                </select>
+              <div class="input__box">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" id="email" class="form__input" required />
               </div>
-            </div>
-            <div class="input__box">
-              <label for="domicilio" class="form__label">Domicilio</label>
-              <input type="text" id="domicilio" class="form__input" required />
-            </div>
-            <div class="input__box">
-              <label for="email" class="form__label">Email</label>
-              <input type="email" id="email" class="form__input" required />
-            </div>
-            <div class="input__box">
-              <label for="password" class="form__label">Contraseña</label>
-              <input
-                type="password"
-                id="password"
-                class="form__input"
-                required
-              />
-            </div>
-            <input type="submit" class="btn-principal" value="Crear Cuenta" />
-            <p>
-              ¿Ya tenes cuenta?
-              <a href="./login.html" class="text-accent">¡Iniciá sesión!</a>
-            </p>
-          </form>
-          <div class="icons flex-column jc-center algn-items-center">
+              <div class="input__box">
+                <label for="password" class="form__label">Contraseña</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form__input"
+                  required
+                />
+              </div>
+              <input type="submit" class="btn-principal" value="Crear Cuenta" />
+              <p class="text-end pt-1">
+                ¿Ya tenes cuenta?
+                <a href="./login.html" class="text-accent">¡Iniciá sesión!</a>
+              </p>
+            </form>
+          </div>
+          <div
+            class="icons col-md-2 d-flex flex-md-column justify-content-center align-items-center"
+          >
             <i class="fa-solid fa-user-plus"></i>
-            <i class="fa-solid fa-file-lines"></i>
+            <i class="fa-solid fa-file-lines me-md-4"></i>
           </div>
         </div>
       </section>
