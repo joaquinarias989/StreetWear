@@ -564,6 +564,9 @@ footer .footer__info {
   align-items: center;
   flex-wrap: wrap;
 }
+footer .footer__info h4 {
+  font-size: inherit;
+}
 footer .footer__info::after {
   content: "";
   width: 100%;
@@ -915,53 +918,43 @@ footer .footer__social a {
   padding: 5rem 0;
   overflow: visible;
 }
-#cart > .flex-row {
+#cart > .row {
   padding: 5rem 0;
-  gap: 8rem;
-}
-#cart .cart__data {
-  flex-basis: 50%;
-  gap: 5rem;
+  font-size: 1.8em;
 }
 #cart .cart__data h2 {
-  font-size: 2.6em;
+  font-size: 1.3em;
   position: relative;
-  margin-bottom: 2.5rem;
 }
 #cart .cart__ship p {
   padding: 0.5rem 0;
-  font-size: 1.7em;
   flex-wrap: wrap;
   gap: 2rem;
 }
 #cart .cart__ship p span {
   font-weight: bold;
   position: relative;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-align: right;
+  align-self: flex-end;
+  justify-items: end;
 }
 #cart .cart__personal p {
-  margin: 1rem 0;
-  font-size: 1.6em;
-  text-align: right;
-}
-#cart .form__input {
-  margin: 0.5rem 0;
+  font-size: 0.9em;
 }
 #cart .cart__personal .flex-row {
   gap: 1rem;
 }
-#cart .cart__fact .checkbox__box {
-  font-size: 1.7em;
-  margin-top: 1rem;
+#cart .form__input {
+  margin: 0.5rem 0;
+  font-size: 1em;
 }
 #cart .btn-principal {
   width: 100%;
-  margin-top: 3rem;
+  font-size: 1em;
 }
 #cart .cart__resume {
-  flex-basis: 40%;
-  gap: 1rem;
+  gap: 2rem;
 }
 #cart .cart__product {
   width: 100%;
@@ -977,13 +970,12 @@ footer .footer__social a {
 }
 #cart .cart__resume .cart__product__info {
   flex-basis: 70%;
-  font-size: 1.7em;
   gap: 0.5rem;
 }
 #cart .cart__product .cart__product__info .text-underlined {
   position: relative;
   display: block;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 #cart .cart__product .cart__product__info h3:last-child {
   text-align: right;
@@ -992,18 +984,20 @@ footer .footer__social a {
 #cart .cart__subtotal {
   margin: 2rem 0;
   padding: 2rem 0;
-  font-size: 2em;
   border-top: 2px solid #dedede;
   border-bottom: 2px solid #dedede;
   gap: 1rem;
 }
+#cart .cart__subtotal h4 {
+  font-size: 1em;
+}
 #cart .cart__subtotal h4 span {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 #cart .cart__total h2 {
   position: relative;
   padding: 0 1.5rem;
-  font-size: 3em;
+  font-size: 1.7em;
 }
 
 /*   MEDIA QUERYS   */
@@ -1019,9 +1013,6 @@ footer .footer__social a {
   }
   #help .help__content .help__list {
     margin: 0;
-  }
-  #cart .cart__resume {
-    flex-basis: 45%;
   }
 }
 
@@ -1099,8 +1090,10 @@ footer .footer__social a {
   #interes .interes__slide {
     justify-content: center;
   }
-  #cart > .flex-row {
+  #cart > .row {
     flex-direction: column-reverse;
+    font-size: 1.7em;
+    gap: 10rem;
   }
   #login .row,
   #register .row {

@@ -85,18 +85,18 @@
     <main>
       <section id="cart" class="container">
         <h1 class="title-primary">Iniciar Compra</h1>
-        <div class="flex-row jc-between">
-          <article class="cart__data flex-column">
+        <div class="row w-100 justify-content-between">
+          <article class="cart__data col-md-6 flex-column">
             <div class="cart__ship">
-              <h2 class="text-leftline">Entrega</h2>
+              <h2 class="text-leftline mb-4">Entrega</h2>
               <p class="flex-row jc-between algn-items-center">
                 Correo Argentino - Envío a Domicilio
                 <span class="text-overline">$ 475</span>
               </p>
             </div>
-            <div class="cart__personal">
-              <h2 class="text-leftline">Datos del Destinatario</h2>
-              <p>
+            <div class="cart__personal mt-4 mb-1">
+              <h2 class="text-leftline mb-1">Datos del Destinatario</h2>
+              <p class="text-end mt-3 mt-sm-2">
                 ¿Ya tenes cuenta?
                 <a href="./login.html" class="text-accent">¡Iniciá sesión!</a>
               </p>
@@ -145,8 +145,8 @@
                 placeholder="Télefono"
               />
             </div>
-            <div class="cart__fact">
-              <h2 class="text-leftline">Datos de Facturación</h2>
+            <div class="cart__fact mt-5">
+              <h2 class="text-leftline mb-4">Datos de Facturación</h2>
               <input
                 type="number"
                 name="dni"
@@ -160,11 +160,13 @@
                 </label>
               </div>
             </div>
-            <button class="btn-principal">
+            <button class="btn-principal mt-5">
               <i class="fas fa-money-bill-wave"></i> Continuar al pago
             </button>
           </article>
-          <article class="cart__resume flex-column">
+          <article
+            class="cart__resume px-md-5 px-xl-0 col-md-6 col-xl-4 flex-column"
+          >
             <div class="cart__product flex-row algn-items-center">
               <div class="cart__product__img">
                 <img src="../img/img-ejemplo.png" alt="" />
@@ -206,8 +208,6 @@
       <div class="container">
         <h2 class="title-secondary">Quizá quieras agregar...</h2>
         <div class="interes__slide flex-row">
-          <i class="fa-solid fa-angle-left"></i>
-          <i class="fa-solid fa-angle-right"></i>
           <article class="product">
             <a href="./product.html">
               <div class="product__img">
@@ -234,6 +234,22 @@
                 <h4 class="product__title">Campera de Jean Levis</h4>
                 <h4 class="product__price">$ 3700<span>$ 5000</span></h4>
 
+                <div class="product__btn flex-row">
+                  <button class="btn-cart">
+                    Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="product">
+            <a href="./product.html">
+              <div class="product__img">
+                <img src="../img/buzo 2.jpg" alt="Imágen gris de ejemplo" />
+              </div>
+              <div class="product__info">
+                <h4 class="product__title">Buzo Levis</h4>
+                <h4 class="product__price">$ 4900</h4>
                 <div class="product__btn flex-row">
                   <button class="btn-cart">
                     Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
