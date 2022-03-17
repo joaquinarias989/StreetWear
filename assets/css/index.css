@@ -1073,7 +1073,9 @@ footer .footer__social a {
   #help .help__list {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 0;
   }
+
   footer .footer__info {
     gap: 2rem;
     position: relative;
@@ -1114,7 +1116,10 @@ footer .footer__social a {
 
 @media screen and (max-width: 425px) {
   #help .help__list {
-    padding: 0 0.1rem;
+    padding: 1rem;
+  }
+  #help .help__list p {
+    margin: 0;
   }
   #contact article {
     flex-direction: column;
