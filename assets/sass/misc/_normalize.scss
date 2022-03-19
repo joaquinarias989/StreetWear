@@ -1,0 +1,88 @@
+/*    FONTS   */
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+
+/*   NORMALIZE   */
+
+* {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+}
+
+/*   GLOBALS  */
+
+html {
+  font-size: 62.5%;
+  line-height: 1.15;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.15;
+}
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $black;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: $accent;
+}
+img {
+  width: 100%;
+}
+button {
+  background: none;
+  cursor: pointer;
+}
+input {
+  background: transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px #fffbdb inset;
+}
+select {
+  background: none;
+}
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $primary;
+}
+.form-check-input:focus {
+  border-color: $primary;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #ffda075b;
+}
+main {
+  min-height: calc(100vh - 74px);
+}

@@ -19,7 +19,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body class="grid-rows-3 bg-bricks">
     <header class="bg-bricks">
@@ -51,12 +51,12 @@
                 >Productos</a
               >
             </li>
-            <li><a href="index.html#help" class="menu__link">Ayuda</a></li>
+            <li><a href="#help" class="menu__link">Ayuda</a></li>
             <li>
-              <a href="index.html#about" class="menu__link">Nosotros</a>
+              <a href="#about" class="menu__link">Nosotros</a>
             </li>
             <li>
-              <a href="index.html#contact" class="menu__link">Contacto</a>
+              <a href="#contact" class="menu__link">Contacto</a>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0 flex-row jc-between">
@@ -93,6 +93,8 @@
           type="button"
           class="btn-principal"
           href="./assets/pages/products.html"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
           ><i class="fas fa-shopping-bag me-2"></i> Comprar ahora</a
         >
       </section>
@@ -123,19 +125,19 @@
       </section>
 
       <section id="help" class="container">
-        <div
-          class="row align-items-center justify-content-between"
-          data-aos="fade-left"
-          data-aos-duration="3000"
-        >
+        <div class="row align-items-center justify-content-between">
           <div
             class="help__icons col-lg-2 d-flex flex-lg-column justify-content-center align-items-center"
+            data-aos="fade-right"
+            data-aos-duration="3000"
           >
             <i class="fas fa-shopping-cart"></i>
             <i class="fas fa-question"></i>
           </div>
           <article
-            class="help__content col-lg-10 d-flex flex-column justify-content-end align-items-end"
+            class="help__content col-md-10 col-lg-9 d-flex flex-column justify-content-end align-items-end"
+            data-aos="fade-left"
+            data-aos-duration="3000"
           >
             <h2 class="title-primary">¿Cómo compro?</h2>
             <div class="help__list">
@@ -191,13 +193,11 @@
       </section>
 
       <section id="about" class="container">
-        <div
-          class="row align-items-center justify-content-between"
-          data-aos="fade-right"
-          data-aos-duration="3000"
-        >
+        <div class="row align-items-center justify-content-between">
           <article
-            class="about__content col-md-8 d-flex flex-column align-items-start"
+            class="about__content col-md-8 col-lg-7 d-flex flex-column align-items-start"
+            data-aos="fade-right"
+            data-aos-duration="3000"
           >
             <h2 class="title-primary">¿Quiénes Somos?</h2>
             <div class="accordion ms-md-5" id="accordionExample">
@@ -284,7 +284,9 @@
             </div>
           </article>
           <div
-            class="about__icons col-md-2 d-flex flex-md-column justify-content-center align-items-center"
+            class="about__icons col-md-3 col-lg-4 d-flex flex-md-column justify-content-center align-items-center"
+            data-aos="fade-left"
+            data-aos-duration="3000"
           >
             <img
               src="./assets/img/logo.png"
@@ -295,54 +297,10 @@
         </div>
       </section>
 
-      <!-- <section id="about" class="container">
-        <div
-          class="row align-items-center justify-content-between"
-          data-aos="fade-right"
-          data-aos-duration="3000"
-        >
-          <article
-            class="about__content col-md-8 d-flex flex-column align-items-start"
-          >
-            <h2 class="title-primary">¿Quiénes Somos?</h2>
-            <ul class="ms-md-5">
-              <h3>Nosotros</h3>
-              <li>
-                Somos Diego Percaz y Joaquín Arias, de Arroyito Córdoba para
-                todo el mundo.
-              </li>
-              <h3>Inicios</h3>
-              <li>
-                En un principio arrancamos con esto para traer ropa que no se
-                conseguía accesiblemente en nuestro pueblo, por lo que empezamos
-                a salir a buscar prendas a nuestro gusto y de pasó ir conociendo
-                el mundo de la moda urbana.
-              </li>
-              <h3>Actualidad</h3>
-              <li>
-                Ahora nuestros clientes objetivos no son sólo los de nuestro
-                pueblo, sino que logramos una fidelidad con amigos de todo el
-                país. A futuro tenemos planeado ingresar en el mundo del diseño
-                y fabricación de prendas propias.
-              </li>
-            </ul>
-          </article>
-          <div
-            class="about__icons col-md-2 d-flex flex-md-column justify-content-center align-items-center"
-          >
-            <img
-              src="./assets/img/logo.png"
-              alt="Logo de la tienda en color blanco y amarillo"
-            />
-            <i class="fas fa-info"></i>
-          </div>
-        </div>
-      </section> -->
-
       <section id="contact" class="container">
         <article class="flex-row" data-aos="fade-up" data-aos-duration="3000">
           <h2 class="title-primary vertical">Contactános</h2>
-          <form class="form__paper">
+          <form class="form__paper" data-aos="zoom-in" data-aos-duration="3000">
             <div class="input__box">
               <label for="name" class="form__label">Nombre y Apellido</label>
               <input type="text" id="name" class="form__input" required="" />
