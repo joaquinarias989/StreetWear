@@ -52,9 +52,10 @@ a {
   color: $black;
   display: inline-block;
   transition: all 0.2s ease-in-out;
-}
-a:hover {
-  color: $accent;
+
+  &:hover {
+    color: $accent;
+  }
 }
 img {
   width: 100%;
@@ -65,24 +66,28 @@ button {
 }
 input {
   background: transparent;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-  box-shadow: 0 0 0px 1000px #fffbdb inset;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px #fffbdb inset;
+  }
 }
 select {
   background: none;
 }
-.form-check-input:checked {
-  background-color: $primary;
-  border-color: $primary;
+.form-check-input {
+  &:checked {
+    background-color: $primary;
+    border-color: $primary;
+  }
+  &:focus {
+    border-color: $primary;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ffda075b;
+  }
 }
-.form-check-input:focus {
-  border-color: $primary;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem #ffda075b;
-}
+
 main {
   min-height: calc(100vh - 74px);
 }

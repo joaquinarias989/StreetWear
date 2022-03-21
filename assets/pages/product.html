@@ -120,15 +120,65 @@
           </div>
         </div>
 
-        <div class="product__main row justify-content-between">
+        <div class="product__main row justify-content-between w-100">
           <div
-            class="product__img col-md-6 col-lg-5 col-xl-4 d-flex justify-content-center mb-4 mb-md-0"
+            class="product__slide col-md-6 col-lg-5 d-flex justify-content-center mb-4 mb-md-0"
           >
-            <img src="../img/shirt yellow.jpg" alt="Imágen gris de ejemplo" />
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../img/shirt yellow.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../img/shirt yellow.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../img/shirt yellow.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
-          <div
-            class="product__details col-md-6 flex-column justify-content-between"
-          >
+          <div class="product__details col-md-6 flex-column">
             <p class="product__description">
               Este producto es ideal para ésta temporada. Innovador y muy
               estiloso. Sin irse por las ramas ni tampoco caer en lo básico. Si
