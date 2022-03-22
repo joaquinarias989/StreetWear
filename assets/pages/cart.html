@@ -85,8 +85,8 @@
     <main>
       <section id="cart" class="container">
         <h1 class="title-primary">Iniciar Compra</h1>
-        <div class="row w-100 justify-content-between">
-          <article class="cart__data col-md-6 flex-column">
+        <div class="row justify-content-between w-100 m-0">
+          <article class="cart__data p-0 col-md-6 flex-column">
             <div class="cart__ship">
               <h2 class="text-leftline mb-4">Entrega</h2>
               <p class="flex-row jc-between algn-items-center">
@@ -94,78 +94,86 @@
                 <span class="text-overline">$ 475</span>
               </p>
             </div>
-            <div class="cart__personal mt-4 mb-1">
-              <h2 class="text-leftline mb-1">Datos del Destinatario</h2>
-              <p class="text-end mt-3 mt-sm-2">
-                ¿Ya tenes cuenta?
-                <a href="./login.html" class="text-accent">¡Iniciá sesión!</a>
-              </p>
-              <input
-                type="email"
-                name="email"
-                class="form__input"
-                placeholder="Email"
-              />
-              <input
-                type="text"
-                name="name"
-                class="form__input"
-                placeholder="Nombre y Apellido"
-              />
-              <div class="flex-row jc-between">
+            <form action="">
+              <div class="cart__personal mt-4 mb-1">
+                <h2 class="text-leftline mb-1">Datos del Destinatario</h2>
+                <p class="text-end mt-3 mt-sm-2">
+                  ¿Ya tenes cuenta?
+                  <a href="./login.html" class="text-accent">¡Iniciá sesión!</a>
+                </p>
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input"
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  type="text"
+                  name="name"
+                  class="form__input"
+                  placeholder="Nombre y Apellido"
+                  required
+                />
+                <div class="flex-row jc-between">
+                  <input
+                    type="number"
+                    name="codpostal"
+                    class="form__input"
+                    placeholder="Cód. Postal"
+                    required
+                  />
+                  <select name="provincia" class="form__input" required>
+                    <option value="cba" selected disabled>Provincia</option>
+                    <option value="cba">Córdoba</option>
+                    <option value="bsas">Buenos Aires</option>
+                    <option value="stafe">Santa Fe</option>
+                  </select>
+                </div>
+                <input
+                  type="text"
+                  name="adress"
+                  class="form__input"
+                  placeholder="Domicilio"
+                  required
+                />
+                <input
+                  type="text"
+                  name="dpto"
+                  class="form__input"
+                  placeholder="Departamento (opcional)"
+                />
                 <input
                   type="number"
-                  name="codpostal"
+                  name="tel"
                   class="form__input"
-                  placeholder="Cód. Postal"
+                  placeholder="Télefono"
+                  required
                 />
-                <select name="provincia" class="form__input">
-                  <option value="cba" selected disabled>Provincia</option>
-                  <option value="cba">Córdoba</option>
-                  <option value="bsas">Buenos Aires</option>
-                  <option value="stafe">Santa Fe</option>
-                </select>
               </div>
-              <input
-                type="text"
-                name="adress"
-                class="form__input"
-                placeholder="Domicilio"
-              />
-              <input
-                type="text"
-                name="dpto"
-                class="form__input"
-                placeholder="Departamento (opcional)"
-              />
-              <input
-                type="number"
-                name="tel"
-                class="form__input"
-                placeholder="Télefono"
-              />
-            </div>
-            <div class="cart__fact mt-5">
-              <h2 class="text-leftline mb-4">Datos de Facturación</h2>
-              <input
-                type="number"
-                name="dni"
-                class="form__input"
-                placeholder="DNI ó CUIL"
-              />
-              <div class="checkbox__box">
-                <input type="checkbox" name="check" />
-                <label for="check"
-                  >Mis datos de facturación y entrega son los mismos
-                </label>
+              <div class="cart__fact mt-5">
+                <h2 class="text-leftline mb-4">Datos de Facturación</h2>
+                <input
+                  type="number"
+                  name="dni"
+                  class="form__input"
+                  placeholder="DNI ó CUIL"
+                  required
+                />
+                <div class="checkbox__box">
+                  <input type="checkbox" name="check" />
+                  <label for="check"
+                    >Mis datos de facturación y entrega son los mismos
+                  </label>
+                </div>
               </div>
-            </div>
-            <button class="btn-principal mt-5">
-              <i class="fas fa-money-bill-wave"></i> Continuar al pago
-            </button>
+              <button type="submit" class="btn-principal mt-5 w-100">
+                <i class="fas fa-money-bill-wave"></i> Continuar al pago
+              </button>
+            </form>
           </article>
           <article
-            class="cart__resume px-md-5 px-xl-0 col-md-6 col-xl-4 flex-column"
+            class="cart__resume p-0 px-md-5 px-xl-0 col-md-6 col-xl-4 flex-column"
           >
             <div class="cart__product flex-row algn-items-center">
               <div class="cart__product__img">
