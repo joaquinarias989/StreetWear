@@ -712,9 +712,8 @@ footer {
   .title-primary {
     width: 100%;
     padding: 0.2rem 0;
-    transform: rotate(0) !important;
   }
-  #contact .title-primary.vertical {
+  .title-primary.vertical {
     width: auto;
   }
   #help {
@@ -732,6 +731,9 @@ footer {
     .about__icons {
       margin-top: 8rem;
       gap: 5rem;
+    }
+    .about__content .title-primary {
+      transform: rotate(0);
     }
   }
   #contact {
@@ -803,7 +805,6 @@ footer {
       }
     }
   }
-
   .product .product__img {
     width: 315px;
   }

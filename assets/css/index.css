@@ -329,14 +329,6 @@ main {
   .product:hover .offer {
     animation: float 0.4s ease-in-out infinite alternate; }
 
-@media screen and (max-width: 767px) {
-  .title-underlined {
-    font-size: 4em; }
-  .title-primary {
-    width: 100%;
-    padding: 0.2rem 0;
-    transform: rotate(0); } }
-
 /*   Header y NAV   */
 header {
   position: sticky;
@@ -821,9 +813,8 @@ footer {
     font-size: 4em; }
   .title-primary {
     width: 100%;
-    padding: 0.2rem 0;
-    transform: rotate(0) !important; }
-  #contact .title-primary.vertical {
+    padding: 0.2rem 0; }
+  .title-primary.vertical {
     width: auto; }
   #help .row .help__content .help__list {
     grid-template-columns: 1fr;
@@ -832,6 +823,8 @@ footer {
   #about .about__icons {
     margin-top: 8rem;
     gap: 5rem; }
+  #about .about__content .title-primary {
+    transform: rotate(0); }
   #contact article .form__paper {
     flex-basis: 85%;
     padding: 1rem 3rem; }
