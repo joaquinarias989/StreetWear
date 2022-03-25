@@ -1,0 +1,59 @@
+.login,
+.register {
+  padding: 5rem 0;
+  overflow: visible;
+
+  .icons {
+    font-size: 6em;
+    color: $primary;
+    gap: 3rem;
+  }
+
+  .form__paper {
+    .input__box {
+      gap: 1rem;
+
+      select {
+        padding: 0.45rem 0;
+      }
+    }
+
+    .btn-principal {
+      margin: 5rem 0 0.5rem 0;
+      width: 100%;
+      font-size: 1.9em;
+    }
+
+    > a {
+      font-size: 1.6em;
+      margin: -1rem 0 0 0;
+    }
+
+    p {
+      font-size: 1.7em;
+    }
+  }
+
+  > p {
+    margin-top: 4rem;
+    color: $white;
+    font-size: 1.8em;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login .icons,
+  .register .icons {
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .login .form__paper,
+  .register .form__paper {
+    padding: 3rem 2rem;
+  }
+  .register .text-leftline::before {
+    width: 0;
+  }
+}

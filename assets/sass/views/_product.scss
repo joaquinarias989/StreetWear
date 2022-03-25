@@ -1,0 +1,93 @@
+.product {
+  padding: 5rem 0;
+
+  &__header {
+    font-size: 2em;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.1em;
+    }
+
+    .product__ship {
+      input {
+        font-size: 0.9em;
+        border-bottom: 4px solid $primary;
+        padding: 0.1rem;
+        text-align: right;
+        width: 100%;
+      }
+      button {
+        font-size: 1em;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  &__main {
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+
+    .product__slide img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .product__details {
+      gap: 1rem;
+      font-size: 1.8em;
+
+      .product__description {
+        position: relative;
+        margin-bottom: 4rem;
+
+        &::before {
+          content: "";
+          width: 70%;
+          background: rgba(0, 0, 0, 0.3);
+          height: 3px;
+          position: absolute;
+          bottom: -3rem;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          border-radius: 10px;
+        }
+      }
+
+      .product__preferences select {
+        border: 2px solid $black;
+        border-radius: 2px;
+        padding: 0.5rem;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+
+      .product__quantity {
+        background: $black;
+        border: 2px solid $black;
+        border-radius: 2px;
+        overflow: hidden;
+
+        .btn-quantity {
+          flex-basis: 33%;
+          padding: 0.3rem;
+          font-weight: bold;
+          color: $white;
+        }
+        input {
+          background: #f4f4f4;
+          flex-basis: 33%;
+          padding: 0.4rem 0;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+
+      .btn-principal {
+        font-size: 1em;
+      }
+    }
+  }
+}

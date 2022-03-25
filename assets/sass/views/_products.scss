@@ -1,0 +1,36 @@
+.products {
+  padding: 5rem 0;
+  overflow: visible;
+
+  .section__header {
+    .title-primary {
+      padding: 0.5rem 5rem;
+    }
+
+    i {
+      font-size: 2.5em;
+      padding: 1.5rem 0.9rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .offcanvas {
+      top: 74.05px;
+      font-size: 1.8em;
+    }
+  }
+  &__list {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+  .btn-principal {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}

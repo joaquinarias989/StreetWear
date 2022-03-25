@@ -1,0 +1,28 @@
+.interes {
+  .container {
+    padding: 4rem 0;
+    overflow: visible;
+  }
+
+  &__slide {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 4rem 0 1rem 0;
+
+    .product__card a {
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .interes {
+    h2 {
+      width: 100%;
+      padding: 0.2rem 1rem;
+    }
+    &__slide {
+      justify-content: center;
+    }
+  }
+}

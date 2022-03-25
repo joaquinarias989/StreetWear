@@ -1,0 +1,252 @@
+/*   WELCOME   */
+.welcome {
+  height: calc(100vh - 74.05px);
+  justify-content: center;
+  align-items: center;
+  background: url(../img/welcome-garage-2.jpg) center center fixed no-repeat;
+  background-size: cover;
+  border-bottom: 5px solid $primary;
+  box-shadow: 0 0 40px #ffda077e;
+
+  .btn-principal {
+    animation: float 0.6s ease-in-out infinite alternate;
+  }
+}
+/*   CATEGORIES   */
+.categories {
+  .flex-row {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+
+    article {
+      align-items: center;
+      position: relative;
+      animation: float 0.5s ease-in-out infinite alternate;
+
+      .btn-secundario {
+        position: absolute;
+        bottom: 0;
+        text-transform: lowercase;
+        font-style: italic;
+      }
+
+      img {
+        max-width: 350px;
+      }
+    }
+  }
+}
+/*   HELP   */
+.help {
+  padding: 5rem 0;
+
+  &__icons {
+    font-size: 7.5em;
+    gap: 2rem;
+
+    .fa-shopping-cart {
+      color: $white;
+      transform: rotate(-5deg);
+    }
+    .fa-question {
+      color: $primary;
+      transform: rotate(10deg);
+    }
+  }
+
+  &__content {
+    .title-primary {
+      transform: rotate(5deg);
+      z-index: 30;
+    }
+    .help__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 3rem;
+      background: $light-color;
+      font-size: 1.8em;
+      padding: 3rem 2rem;
+      margin-right: 3rem;
+      box-shadow: 10px 10px 8px #1f1f1f7e;
+      border-radius: 2px;
+      line-height: 1.8em;
+
+      .d-flex {
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+
+        span {
+          font-family: $font-secondary;
+          flex-basis: 15%;
+          font-weight: bold;
+          font-size: 1.8em;
+          position: relative;
+          text-align: center;
+          z-index: 10;
+
+          &::after {
+            content: "";
+            height: 6px;
+            width: 50%;
+            background: $primary;
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: -10;
+            transition: all 0.3s ease-out;
+          }
+        }
+        &:hover span::after {
+          width: 70%;
+        }
+        p {
+          flex-basis: 85%;
+        }
+      }
+    }
+  }
+}
+/*   ABOUT US   */
+.about {
+  padding: 5rem 0;
+
+  &__content {
+    .title-primary {
+      transform: rotate(-3deg);
+      z-index: 30;
+    }
+    .accordion {
+      width: 100%;
+      font-size: 1.6em;
+
+      &-button {
+        font-size: 0.9em;
+        transition: all 0.3s ease-in-out;
+
+        &:not(.collapsed),
+        &:focus {
+          color: $black;
+          box-shadow: inset 0 -1px 0 rgba(240, 236, 16, 0.664);
+          border: none;
+          background: #faf2b6;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    color: $primary;
+    font-size: 5em;
+    gap: 2rem;
+
+    img {
+      max-width: 125px;
+    }
+  }
+}
+/*   CONTACT   */
+.contact {
+  padding: 5rem 0 10rem 0;
+
+  article {
+    .title-primary {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      z-index: 30;
+      padding: 4rem 0.2rem;
+    }
+    .form__paper {
+      flex-basis: 60%;
+
+      .btn-principal {
+        width: 100%;
+        margin-bottom: 2rem;
+        font-size: 1.9em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .help {
+    &__icons {
+      gap: 5rem;
+      margin-top: 8rem;
+    }
+    &__content {
+      .help__list {
+        margin: 0;
+      }
+      .title-primary {
+        width: 100%;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .help {
+    &__content {
+      .help__list {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-row-gap: 0;
+      }
+    }
+  }
+  .about {
+    &__icons {
+      margin-top: 8rem;
+      gap: 5rem;
+    }
+    &__content .title-primary {
+      transform: rotate(0);
+    }
+  }
+  .contact {
+    article {
+      .form__paper {
+        flex-basis: 85%;
+        padding: 1rem 3rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .help {
+    &__content {
+      .help__list {
+        padding: 1rem;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .contact {
+    article {
+      flex-direction: column;
+
+      .title-primary {
+        flex-basis: 100%;
+        writing-mode: initial;
+        transform: rotate(0);
+        width: 100%;
+        padding: 0.2rem 0;
+      }
+
+      .form__paper {
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}
