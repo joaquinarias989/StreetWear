@@ -83,9 +83,9 @@
     </header>
 
     <main>
-      <section id="cart" class="container">
+      <section id="cart" class="cart container">
         <h1 class="title-primary">Iniciar Compra</h1>
-        <div class="row justify-content-between w-100 m-0">
+        <div class="row justify-content-between w-100">
           <article class="cart__data p-0 col-md-6 flex-column">
             <div class="cart__ship">
               <h2 class="text-leftline mb-4">Entrega</h2>
@@ -212,19 +212,19 @@
       </section>
     </main>
 
-    <section id="interes" class="bg-bricks">
+    <section id="interes" class="interes bg-bricks">
       <div class="container">
-        <h2 class="title-secondary">Quizá quieras agregar...</h2>
+        <h2 class="title-secondary">Te puede interesar...</h2>
         <div class="interes__slide flex-row">
-          <article class="product">
+          <article class="product__card">
             <a href="./product.html">
-              <div class="product__img">
+              <div class="product__card__img">
                 <img src="../img/tshirt 2.jpg" />
               </div>
-              <div class="product__info">
-                <h4 class="product__title">Remera F*cking Awesome</h4>
-                <h4 class="product__price">$ 2499</h4>
-                <div class="product__btn flex-row">
+              <div class="product__card__info">
+                <h4 class="product__card__title">Remera F*cking Awesome</h4>
+                <h4 class="product__card__price">$ 2499</h4>
+                <div class="product__card__btn flex-row">
                   <button class="btn-cart">
                     Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
                   </button>
@@ -232,17 +232,17 @@
               </div>
             </a>
           </article>
-          <article class="product ganga">
+          <article class="product__card ganga">
             <a href="./product.html">
               <span class="offer">GANGA!</span>
-              <div class="product__img">
+              <div class="product__card__img">
                 <img src="../img/campera.jpg" alt="Imágen gris de ejemplo" />
               </div>
-              <div class="product__info">
-                <h4 class="product__title">Campera de Jean Levis</h4>
-                <h4 class="product__price">$ 3700<span>$ 5000</span></h4>
+              <div class="product__card__info">
+                <h4 class="product__card__title">Campera de Jean Levis</h4>
+                <h4 class="product__card__price">$ 3700<span>$ 5000</span></h4>
 
-                <div class="product__btn flex-row">
+                <div class="product__card__btn flex-row">
                   <button class="btn-cart">
                     Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
                   </button>
@@ -250,15 +250,15 @@
               </div>
             </a>
           </article>
-          <article class="product">
+          <article class="product__card">
             <a href="./product.html">
-              <div class="product__img">
+              <div class="product__card__img">
                 <img src="../img/buzo 2.jpg" alt="Imágen gris de ejemplo" />
               </div>
-              <div class="product__info">
-                <h4 class="product__title">Buzo Levis</h4>
-                <h4 class="product__price">$ 4900</h4>
-                <div class="product__btn flex-row">
+              <div class="product__card__info">
+                <h4 class="product__card__title">Buzo Levis</h4>
+                <h4 class="product__card__price">$ 4900</h4>
+                <div class="product__card__btn flex-row">
                   <button class="btn-cart">
                     Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
                   </button>
@@ -270,7 +270,7 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
         <div class="footer__info flex-column flex-md-row">
           <a href="../../index.html"><i class="fas fa-home"></i></a>

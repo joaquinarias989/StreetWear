@@ -1,0 +1,95 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-bottom: 5px solid $primary;
+  z-index: 9999;
+
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    overflow: visible;
+
+    .logo {
+      align-items: center;
+      justify-content: center;
+      width: 130px;
+      margin-right: 1rem;
+    }
+
+    &-nav {
+      font-size: 1.7em;
+
+      .menu__link {
+        color: $white;
+        font-weight: bold;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+        padding: 1rem 0.5rem;
+        margin: 0 0.5rem;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 0;
+          width: 0;
+          background: #e2e2e2;
+          right: -5px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          transition: height 0.2s ease-out, background 0.5s ease-out;
+        }
+        &:not(.menu__link--active):hover::after {
+          height: 50%;
+          width: 3px;
+          background: $primary;
+        }
+        &--active::after {
+          content: "";
+          position: absolute;
+          background-color: $primary;
+          height: 3px;
+          width: 100%;
+          top: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+        }
+      }
+
+      i {
+        font-size: 1.2em;
+      }
+
+      .dropdown-link {
+        position: relative;
+
+        .sub-menu {
+          display: none;
+          position: absolute;
+          top: 5rem;
+          left: -2rem;
+          padding: 0 1rem 0 0.5rem;
+          border-bottom: 5px solid $primary;
+
+          .menu__link {
+            padding: 1rem;
+          }
+        }
+        &:hover .sub-menu {
+          display: block;
+        }
+      }
+    }
+
+    #btnMenu {
+      font-size: 2em;
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}

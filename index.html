@@ -89,18 +89,16 @@
     </header>
 
     <main>
-      <section id="welcome" class="flex-row">
+      <section id="welcome" class="welcome flex-row">
         <a
           type="button"
           class="btn-principal"
           href="./assets/pages/products.html"
-          data-aos="zoom-in"
-          data-aos-duration="2000"
           ><i class="fas fa-shopping-bag me-2"></i> Comprar ahora</a
         >
       </section>
 
-      <section id="categories" class="container">
+      <section id="categories" class="categories container">
         <div class="flex-row" data-aos="fade-right" data-aos-duration="3000">
           <article class="flex-column">
             <img src="./assets/img/hanger.png" alt="#" />
@@ -125,8 +123,10 @@
         </div>
       </section>
 
-      <section id="help" class="container">
-        <div class="row align-items-center justify-content-between">
+      <section id="help" class="help container">
+        <div
+          class="row align-items-center justify-content-between flex-wrap-reverse"
+        >
           <div
             class="help__icons col-xl-3 d-flex flex-xl-column justify-content-center align-items-center"
             data-aos="fade-right"
@@ -193,7 +193,7 @@
         </div>
       </section>
 
-      <section id="about" class="container">
+      <section id="about" class="about container">
         <div class="row align-items-center justify-content-between">
           <article
             class="about__content col-md-8 col-lg-7 d-flex flex-column align-items-start"
@@ -298,8 +298,12 @@
         </div>
       </section>
 
-      <section id="contact" class="container">
-        <article class="flex-row" data-aos="fade-up" data-aos-duration="3000">
+      <section id="contact" class="contact container">
+        <article
+          class="d-flex justify-content-center align-items-center flex-wrap"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <h2 class="title-primary vertical">Contactános</h2>
           <form class="form__paper" data-aos="zoom-in" data-aos-duration="3000">
             <div class="input__box">
@@ -326,7 +330,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
         <div class="footer__info flex-column flex-md-row">
           <a href="./index.html"><i class="fas fa-home"></i></a>

@@ -91,3 +91,6 @@ select {
 main {
   min-height: calc(100vh - 74px);
 }
+.row {
+  --bs-gutter-x: 0;
+}
