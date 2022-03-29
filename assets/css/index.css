@@ -64,14 +64,17 @@ input {
 select {
   background: none; }
 
-.form-check-input:checked {
-  background-color: #ffda07;
-  border-color: #ffda07; }
-
-.form-check-input:focus {
-  border-color: #ffda07;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem #ffda075b; }
+.form-check-input {
+  transition: all 0.1s ease-in-out; }
+  .form-check-input:hover {
+    border-color: #ffda07; }
+  .form-check-input:checked {
+    background-color: #ffda07;
+    border-color: #ffda07; }
+  .form-check-input:focus {
+    border-color: #ffda07;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ffda075b; }
 
 main {
   min-height: calc(100vh - 74px); }
