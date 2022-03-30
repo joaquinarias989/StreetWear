@@ -2,10 +2,8 @@
   margin-bottom: 3rem;
 
   .breadcrumb {
-    display: flex;
-    align-items: center;
+    @include flex(start, center, 0.5rem);
     flex-wrap: wrap;
-    gap: 0.5rem;
     margin: 1rem 0;
     font-size: 1.7em;
 

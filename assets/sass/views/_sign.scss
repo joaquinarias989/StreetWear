@@ -7,6 +7,9 @@
     font-size: 6em;
     color: $primary;
     gap: 3rem;
+    @include breakpoint(md) {
+      padding-top: 5rem;
+    }
   }
 
   .form__paper {
@@ -32,6 +35,10 @@
     p {
       font-size: 1.7em;
     }
+
+    @include breakpoint(sm) {
+      padding: 3rem 2rem;
+    }
   }
 
   > p {
@@ -42,18 +49,8 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .login .icons,
-  .register .icons {
-    padding-top: 5rem;
-  }
-}
-@media screen and (max-width: 425px) {
-  .login .form__paper,
-  .register .form__paper {
-    padding: 3rem 2rem;
-  }
-  .register .text-leftline::before {
+.register .text-leftline::before {
+  @include breakpoint(sm) {
     width: 0;
   }
 }

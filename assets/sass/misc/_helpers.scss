@@ -6,6 +6,10 @@
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
+
+  @include breakpoint(sm) {
+    width: 95%;
+  }
 }
 .flex-row {
   display: flex;
@@ -25,26 +29,6 @@
 }
 .jc-between {
   justify-content: space-between;
-}
-
-/*    LAYOUT    */
-
-.grid-rows-3 {
-  display: grid;
-  grid-template-rows: max-content 1fr max-content;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
-.grid-rows-4 {
-  display: grid;
-  grid-template-rows: max-content 1fr max-content max-content;
-  grid-template-areas:
-    "header"
-    "main"
-    "interest"
-    "footer";
 }
 
 /*    TEXT & BACKGROUNDS    */
@@ -77,42 +61,30 @@
   position: relative;
   padding-right: 3rem;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
+  &::before {
+    @extend .lines-decoration;
     height: 7px;
-    background: $primary;
-    bottom: 5px;
+    bottom: 6px;
     left: 0;
-    z-index: -1;
   }
 }
 .text-accent {
   color: $accent;
   font-weight: bold;
 }
-.text-underlined::after {
-  position: absolute;
-  content: "";
-  width: 100%;
+.text-underlined::before {
+  @extend .lines-decoration;
   height: 4px;
-  background: $primary;
   bottom: 3px;
   left: 0;
-  z-index: -1;
 }
-.text-overline::after {
-  position: absolute;
-  content: "";
-  width: 100%;
+.text-overline::before {
+  @extend .lines-decoration;
   height: 7px;
-  background: $primary;
   top: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  z-index: -1;
 }
 .text-leftline::before {
   position: absolute;
@@ -130,10 +102,7 @@
 /*    BUTTONS    */
 
 .btn-principal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  @include flex(center, center, 0.5rem);
   background: $primary;
   color: $black;
   border-radius: 2px;
@@ -149,10 +118,7 @@
   }
 }
 .btn-secundario {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  @include flex(center, center, 0.5rem);
   background: $white;
   color: $black;
   border-radius: 0;
@@ -307,6 +273,15 @@
   &:hover .offer {
     animation: float 0.4s ease-in-out infinite alternate;
   }
+
+  @include breakpoint(sm) {
+    &__img {
+      width: 315px;
+    }
+    .offer {
+      right: -5px;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -319,19 +294,5 @@
   }
   .title-primary.vertical {
     width: auto;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .container {
-    width: 95%;
-  }
-  .product__card {
-    &__img {
-      width: 315px;
-    }
-    .offer {
-      right: -5px;
-    }
   }
 }

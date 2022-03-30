@@ -5,5 +5,38 @@ $white: #fff;
 $light-color: hsla(0, 0%, 100%, 0.961);
 $font-primary: "Urbanist", sans-serif;
 $font-secondary: "Hammersmith One", sans-serif;
-// $box-shadow: 0.5rem 0.5rem 0 rgb(149, 87, 32);
-// $border: 0.2rem solid $primary;
+
+//    MAPS
+
+$breakpoints: (
+  sm: 425px,
+  md: 767px,
+  lg: 1199px,
+);
+
+// MIXINS
+
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  }
+}
+
+@mixin flex($justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// EXTENDS
+
+.lines-decoration {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: $primary;
+  z-index: -1;
+}

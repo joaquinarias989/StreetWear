@@ -13,10 +13,8 @@
       box-shadow: none;
     }
   }
-}
 
-@media screen and (max-width: 767px) {
-  .interes {
+  @include breakpoint(md) {
     h2 {
       width: 100%;
       padding: 0.2rem 1rem;

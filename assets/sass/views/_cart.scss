@@ -2,9 +2,15 @@
   padding: 5rem 0;
   overflow: visible;
 
-  .row {
+  > .row {
     padding: 5rem 0;
     font-size: 1.8em;
+
+    @include breakpoint(md) {
+      flex-direction: column-reverse;
+      font-size: 1.7em;
+      gap: 10rem;
+    }
   }
 
   &__data {
@@ -44,6 +50,16 @@
 
     .btn-principal {
       font-size: 1em;
+    }
+
+    @include breakpoint(sm) {
+      h2 {
+        text-align: center;
+      }
+
+      .text-leftline::before {
+        left: 0;
+      }
     }
   }
 
@@ -108,27 +124,6 @@
       position: relative;
       padding: 0 1.5rem;
       font-size: 1.7em;
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .cart > .row {
-    flex-direction: column-reverse;
-    font-size: 1.7em;
-    gap: 10rem;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .cart {
-    &__data {
-      h2 {
-        text-align: center;
-      }
-      .text-leftline::before {
-        left: 0;
-      }
     }
   }
 }

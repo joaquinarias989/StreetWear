@@ -1,8 +1,7 @@
 /*   WELCOME   */
 .welcome {
   height: calc(100vh - 74.05px);
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center, null);
   background: url(../img/welcome-garage-2.webp) center center fixed no-repeat;
   background-size: cover;
   border-bottom: 5px solid $primary;
@@ -54,12 +53,21 @@
       color: $primary;
       transform: rotate(10deg);
     }
+    @include breakpoint(lg) {
+      gap: 5rem;
+      margin-top: 8rem;
+    }
   }
 
   &__content {
     .title-primary {
       transform: rotate(5deg);
       z-index: 30;
+
+      @include breakpoint(lg) {
+        width: 100%;
+        transform: rotate(0deg);
+      }
     }
     .help__list {
       display: grid;
@@ -110,6 +118,22 @@
           flex-basis: 85%;
         }
       }
+
+      @include breakpoint(lg) {
+        margin: 0;
+      }
+      @include breakpoint(md) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-row-gap: 0;
+      }
+      @include breakpoint(sm) {
+        padding: 1rem;
+
+        p {
+          margin: 0;
+        }
+      }
     }
   }
 }
@@ -121,6 +145,9 @@
     .title-primary {
       transform: rotate(-3deg);
       z-index: 30;
+      @include breakpoint(md) {
+        transform: rotate(0);
+      }
     }
     .accordion {
       width: 100%;
@@ -149,6 +176,11 @@
     img {
       max-width: 125px;
     }
+
+    @include breakpoint(md) {
+      margin-top: 8rem;
+      gap: 5rem;
+    }
   }
 }
 /*   CONTACT   */
@@ -170,69 +202,14 @@
         margin-bottom: 2rem;
         font-size: 1.9em;
       }
-    }
-  }
-}
 
-@media screen and (max-width: 1199px) {
-  .help {
-    &__icons {
-      gap: 5rem;
-      margin-top: 8rem;
-    }
-    &__content {
-      .help__list {
-        margin: 0;
-      }
-      .title-primary {
-        width: 100%;
-        transform: rotate(0deg);
-      }
-    }
-  }
-}
-@media screen and (max-width: 767px) {
-  .help {
-    &__content {
-      .help__list {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        grid-row-gap: 0;
-      }
-    }
-  }
-  .about {
-    &__icons {
-      margin-top: 8rem;
-      gap: 5rem;
-    }
-    &__content .title-primary {
-      transform: rotate(0);
-    }
-  }
-  .contact {
-    article {
-      .form__paper {
+      @include breakpoint(md) {
         flex-basis: 85%;
         padding: 1rem 3rem;
       }
     }
-  }
-}
-@media screen and (max-width: 425px) {
-  .help {
-    &__content {
-      .help__list {
-        padding: 1rem;
 
-        p {
-          margin: 0;
-        }
-      }
-    }
-  }
-  .contact {
-    article {
+    @include breakpoint(sm) {
       flex-direction: column;
 
       .title-primary {
@@ -245,7 +222,7 @@
 
       .form__paper {
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
       }
     }
   }
