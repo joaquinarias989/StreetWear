@@ -3,10 +3,6 @@
   overflow: visible;
 
   .section__header {
-    .title-primary {
-      padding: 0.5rem 5rem;
-    }
-
     i {
       font-size: 2.5em;
       padding: 1.5rem 0.9rem;
@@ -17,9 +13,21 @@
       }
     }
 
-    .offcanvas {
-      top: 74.05px;
+    .dropdown-menu {
       font-size: 1.8em;
+      min-width: 30rem;
+      max-height: 50rem;
+      overflow: auto;
+
+      h5 {
+        font-size: 1.3em;
+        padding: 0.2rem 0;
+        width: 100%;
+      }
+
+      @include breakpoint(sm) {
+        min-width: 22rem;
+      }
     }
   }
   &__list {

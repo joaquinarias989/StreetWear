@@ -31,6 +31,7 @@ html {
   scroll-padding-top: 7rem;
   scroll-behavior: smooth;
 }
+
 h1,
 h2,
 h3,
@@ -46,6 +47,9 @@ ul,
 ol {
   list-style-type: none;
   padding: 0;
+}
+p {
+  text-align: justify;
 }
 a {
   text-decoration: none;

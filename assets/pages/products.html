@@ -7,7 +7,7 @@
     <title>STREETWEAR | Productos</title>
     <meta
       name="description"
-      content="Todos los productos que siempre quisiste en un sólo lugar. Encontrá esa prenda que tanto venis buscando, pasá y enamoráte!"
+      content="Todos los productos que siempre quisiste en un sólo lugar. Encontrá esa prenda que tanto venis buscando, pasá y enamorate!"
     />
     <meta
       name="keywords"
@@ -104,37 +104,21 @@
             </ol>
           </div>
           <div class="col-md-2 d-flex justify-content-end align-items-start">
-            <button
-              class=""
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasScrolling"
-              aria-controls="offcanvasScrolling"
-            >
-              <i class="fa-solid fa-filter"></i>
-            </button>
-            <div
-              class="offcanvas offcanvas-end"
-              data-bs-scroll="true"
-              data-bs-backdrop="false"
-              tabindex="-1"
-              id="offcanvasScrolling"
-              aria-labelledby="offcanvasScrollingLabel"
-            >
-              <div class="offcanvas-header">
-                <p class="h2 fw-bold" id="offcanvasScrollingLabel">
-                  ¿Qué estas buscando?
-                </p>
-                <button
-                  type="button"
-                  class="btn-close text-reset"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="list-group">
-                  <p class="fw-bold" id="offcanvasScrollingLabel">Categoría</p>
+            <div class="btn-group">
+              <button
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-filter"></i>
+              </button>
+              <div class="dropdown-menu p-4">
+                <h5 class="text-center mb-4">¿Qué estás buscando?</h5>
+
+                <ul class="mt-3">
+                  <p class="mb-1 fw-bold position-relative text-overline">
+                    Categoría
+                  </p>
                   <li>
                     <input
                       class="form-check-input me-1"
@@ -181,8 +165,10 @@
                     Accesorios
                   </li>
                 </ul>
-                <ul class="list-group mt-4">
-                  <p class="fw-bold" id="offcanvasScrollingLabel">Talle</p>
+                <ul class="mt-3">
+                  <p class="mb-1 fw-bold position-relative text-overline">
+                    Talle
+                  </p>
                   <li>
                     <input
                       class="form-check-input me-1"
@@ -249,7 +235,10 @@
           <article class="product__card">
             <a href="./product.html">
               <div class="product__card__img">
-                <img src="../img/shirt yellow.jpg" />
+                <img
+                  src="../img/shirt yellow.jpg"
+                  alt="Hombre parado con las manos en los bolsillos traseros, vistiendo una remera negra con el texto Phenomenally Black"
+                />
               </div>
               <div class="product__card__info">
                 <h4 class="product__card__title">Remera Phenomenally</h4>
@@ -265,7 +254,10 @@
           <article class="product__card">
             <a href="./product.html">
               <div class="product__card__img">
-                <img src="../img/tshirt 2.jpg" />
+                <img
+                  src="../img/tshirt 2.jpg"
+                  alt="Hombre parado con las manos en el bolsillo, vistiendo una remera blanca con un texto en el medio"
+                />
               </div>
               <div class="product__card__info">
                 <h4 class="product__card__title">Remera F*cking Awesome</h4>
@@ -281,7 +273,10 @@
           <article class="product__card">
             <a href="./product.html">
               <div class="product__card__img">
-                <img src="../img/buzo.jpg" alt="Imágen gris de ejemplo" />
+                <img
+                  src="../img/buzo.jpg"
+                  alt="Hombre parado con las manos en el bolsillo, mirando hacia abajo, vistiendo un buzo negro con unas letras chinas en el centro del mismo"
+                />
               </div>
               <div class="product__card__info">
                 <h4 class="product__card__title">Buzo Chineze</h4>
@@ -298,7 +293,10 @@
             <a href="./product.html">
               <span class="offer">GANGA!</span>
               <div class="product__card__img">
-                <img src="../img/campera.jpg" alt="Imágen gris de ejemplo" />
+                <img
+                  src="../img/campera.jpg"
+                  alt="Hombre de perfil, mirando hacia el frente, con las manos en el bolsillo, vistiendo una campera de jean azul claro"
+                />
               </div>
               <div class="product__card__info">
                 <h4 class="product__card__title">Campera de Jean Levis</h4>
@@ -315,7 +313,10 @@
           <article class="product__card">
             <a href="./product.html">
               <div class="product__card__img">
-                <img src="../img/buzo 2.jpg" alt="Imágen gris de ejemplo" />
+                <img
+                  src="../img/buzo 2.jpg"
+                  alt="Hombre sentado en una silla, vistiendo un buzo marca Levis, de color negro y rojo."
+                />
               </div>
               <div class="product__card__info">
                 <h4 class="product__card__title">Buzo Levis</h4>
@@ -328,25 +329,6 @@
               </div>
             </a>
           </article>
-          <!-- <article class="product__card">
-            <a href="./product.html">
-              <div class="product__card__img">
-                <img
-                  src="../img/img-ejemplo.png"
-                  alt="Imágen gris de ejemplo"
-                />
-              </div>
-              <div class="product__card__info">
-                <h4 class="product__card__title">Nombre del Producto</h4>
-                <h4 class="product__card__price">$ 1000</h4>
-                <div class="flex-row">
-                  <button class="btn-cart">
-                    Agregar al carrito <i class="fa-solid fa-cart-plus"></i>
-                  </button>
-                </div>
-              </div>
-            </a>
-          </article> -->
         </div>
 
         <div class="flex-row jc-center algn-items-center">

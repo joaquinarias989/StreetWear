@@ -1,13 +1,9 @@
 /*    FONTS   */
-/* @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"); */
-@font-face {
-  font-family: 'Palette Mosaic';
-  src: url(../PaletteMosaic-Regular.ttf); }
-
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
 /*   NORMALIZE   */
 * {
-  font-family: 'Palette Mosaic', cursive;
+  font-family: "Urbanist", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,6 +40,9 @@ ul,
 ol {
   list-style-type: none;
   padding: 0; }
+
+p {
+  text-align: justify; }
 
 a {
   text-decoration: none;
@@ -115,6 +114,14 @@ main {
 
 .jc-between {
   justify-content: space-between; }
+
+/*     EXTENDS         */
+.pseudo, .title-underlined::before, .text-underlined::before, .text-overline::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #ffda07;
+  z-index: -1; }
 
 /*    TEXT & BACKGROUNDS    */
 .bg-bricks {
@@ -240,20 +247,23 @@ main {
   position: relative;
   max-width: 100%; }
   .product__card a {
-    width: 100%;
+    width: 325px;
+    max-width: 100%;
     border-radius: 2px;
     box-shadow: 1px 5px 10px #b1b1b18e;
-    overflow: hidden; }
+    overflow: hidden;
+    color: #000;
+    transition: all 0.5s ease-in-out; }
+  .product__card:hover a {
+    box-shadow: -5px -5px 10px 3px #c9c9c98e; }
   .product__card__img {
-    width: 325px;
     height: 400px; }
     .product__card__img img {
       height: 100%;
-      display: block;
       object-fit: cover;
       transition: all 0.3s ease-in-out; }
   .product__card:hover .product__card__img img {
-    width: 130%;
+    width: 125%;
     height: 140%; }
   .product__card__info {
     background: #fff;
@@ -313,21 +323,12 @@ main {
     font-weight: bold;
     letter-spacing: 1px;
     box-shadow: 4px 5px 0px #041922; }
+    @media (max-width: 425px) {
+      .product__card .offer {
+        right: -5px;
+        font-size: 1.4em; } }
   .product__card:hover .offer {
     animation: float 0.4s ease-in-out infinite alternate; }
-  @media (max-width: 425px) {
-    .product__card__img {
-      width: 315px; }
-    .product__card .offer {
-      right: -5px; } }
-
-/*     EXTENDS         */
-.lines-decoration, .title-underlined::before, .text-underlined::before, .text-overline::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background: #ffda07;
-  z-index: -1; }
 
 @media screen and (max-width: 767px) {
   .title-underlined {
@@ -657,17 +658,24 @@ header {
 .products {
   padding: 5rem 0;
   overflow: visible; }
-  .products .section__header .title-primary {
-    padding: 0.5rem 5rem; }
   .products .section__header i {
     font-size: 2.5em;
     padding: 1.5rem 0.9rem;
     transition: all 0.2s ease-in-out; }
     .products .section__header i:hover {
       color: #ffda07; }
-  .products .section__header .offcanvas {
-    top: 74.05px;
-    font-size: 1.8em; }
+  .products .section__header .dropdown-menu {
+    font-size: 1.8em;
+    min-width: 30rem;
+    max-height: 50rem;
+    overflow: auto; }
+    .products .section__header .dropdown-menu h5 {
+      font-size: 1.3em;
+      padding: 0.2rem 0;
+      width: 100%; }
+    @media (max-width: 425px) {
+      .products .section__header .dropdown-menu {
+        min-width: 22rem; } }
   .products__list {
     width: 100%;
     flex-wrap: wrap;
@@ -729,17 +737,31 @@ header {
         border: 2px solid #000;
         border-radius: 2px;
         overflow: hidden; }
+        @media (max-width: 425px) {
+          .product__main .product__details .product__quantity {
+            flex-direction: column; } }
         .product__main .product__details .product__quantity .btn-quantity {
           flex-basis: 33%;
           padding: 0.3rem;
           font-weight: bold;
-          color: #fff; }
+          color: #fff;
+          text-align: center;
+          transition: all 0.2s ease-in-out; }
+          .product__main .product__details .product__quantity .btn-quantity:hover {
+            color: #ffda07; }
+          @media (max-width: 425px) {
+            .product__main .product__details .product__quantity .btn-quantity {
+              width: 100%; } }
         .product__main .product__details .product__quantity input {
-          background: #f4f4f4;
           flex-basis: 33%;
-          padding: 0.4rem 0;
+          background: #f4f4f4;
+          padding: 0.3rem;
           font-weight: bold;
-          text-align: center; }
+          text-align: center;
+          width: auto; }
+          @media (max-width: 425px) {
+            .product__main .product__details .product__quantity input {
+              width: 100%; } }
       .product__main .product__details .btn-principal {
         font-size: 1em; }
 
@@ -879,7 +901,7 @@ header {
       padding: 3rem 2rem; } }
   .login > p,
   .register > p {
-    margin-top: 4rem;
+    margin: 3rem 0;
     color: #fff;
     font-size: 1.8em;
     position: relative; }

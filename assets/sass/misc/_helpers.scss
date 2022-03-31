@@ -31,6 +31,16 @@
   justify-content: space-between;
 }
 
+/*     EXTENDS         */
+
+.pseudo {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: $primary;
+  z-index: -1;
+}
+
 /*    TEXT & BACKGROUNDS    */
 
 .bg-bricks {
@@ -62,7 +72,7 @@
   padding-right: 3rem;
 
   &::before {
-    @extend .lines-decoration;
+    @extend .pseudo;
     height: 7px;
     bottom: 6px;
     left: 0;
@@ -73,13 +83,13 @@
   font-weight: bold;
 }
 .text-underlined::before {
-  @extend .lines-decoration;
+  @extend .pseudo;
   height: 4px;
   bottom: 3px;
   left: 0;
 }
 .text-overline::before {
-  @extend .lines-decoration;
+  @extend .pseudo;
   height: 7px;
   top: 0;
   bottom: 0;
@@ -168,25 +178,29 @@
   max-width: 100%;
 
   a {
-    width: 100%;
+    width: 325px;
+    max-width: 100%;
     border-radius: 2px;
     box-shadow: 1px 5px 10px #b1b1b18e;
     overflow: hidden;
+    color: $black;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover a {
+    box-shadow: -5px -5px 10px 3px #c9c9c98e;
   }
 
   &__img {
-    width: 325px;
     height: 400px;
 
     img {
       height: 100%;
-      display: block;
       object-fit: cover;
       transition: all 0.3s ease-in-out;
     }
   }
   &:hover &__img img {
-    width: 130%;
+    width: 125%;
     height: 140%;
   }
 
@@ -269,29 +283,15 @@
     font-weight: bold;
     letter-spacing: 1px;
     box-shadow: 4px 5px 0px #041922;
+
+    @include breakpoint(sm) {
+      right: -5px;
+      font-size: 1.4em;
+    }
   }
   &:hover .offer {
     animation: float 0.4s ease-in-out infinite alternate;
   }
-
-  @include breakpoint(sm) {
-    &__img {
-      width: 315px;
-    }
-    .offer {
-      right: -5px;
-    }
-  }
-}
-
-/*     EXTENDS         */
-
-.lines-decoration {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background: $primary;
-  z-index: -1;
 }
 
 @media screen and (max-width: 767px) {
