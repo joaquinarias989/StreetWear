@@ -13,30 +13,3 @@ $breakpoints: (
   md: 767px,
   lg: 1199px,
 );
-
-// MIXINS
-
-@mixin breakpoint($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media (max-width: #{map-get($breakpoints, $size)}) {
-      @content;
-    }
-  }
-}
-
-@mixin flex($justify, $align, $gap) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  gap: $gap;
-}
-
-// EXTENDS
-
-.lines-decoration {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background: $primary;
-  z-index: -1;
-}

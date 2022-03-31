@@ -284,6 +284,16 @@
   }
 }
 
+/*     EXTENDS         */
+
+.lines-decoration {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: $primary;
+  z-index: -1;
+}
+
 @media screen and (max-width: 767px) {
   .title-underlined {
     font-size: 4em;

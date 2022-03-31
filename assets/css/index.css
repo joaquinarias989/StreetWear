@@ -1,16 +1,13 @@
+/*    FONTS   */
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
-.lines-decoration, .title-underlined::before, .text-underlined::before, .text-overline::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background: #ffda07;
-  z-index: -1; }
+@font-face {
+  font-family: 'Palette Mosaic', cursive;
+  src: url(../PaletteMosaic-Regular.ttf); }
 
-/*    FONTS   */
 /*   NORMALIZE   */
 * {
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Palette Mosaic', cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -84,7 +81,7 @@ select {
     box-shadow: 0 0 0 0.25rem #ffda075b; }
 
 main {
-  min-height: calc(100vh - 74px); }
+  min-height: calc(100vh - 75.13px); }
 
 .row {
   --bs-gutter-x: 0; }
@@ -324,6 +321,14 @@ main {
     .product__card .offer {
       right: -5px; } }
 
+/*     EXTENDS         */
+.lines-decoration, .title-underlined::before, .text-underlined::before, .text-overline::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #ffda07;
+  z-index: -1; }
+
 @media screen and (max-width: 767px) {
   .title-underlined {
     font-size: 4em; }
@@ -342,7 +347,7 @@ header {
   header .navbar {
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     overflow: visible; }
     header .navbar .logo {
       align-items: center;
@@ -454,13 +459,17 @@ header {
   .footer__social {
     justify-content: center;
     align-items: center;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    flex-wrap: wrap; }
+    @media (max-width: 425px) {
+      .footer__social {
+        gap: 1rem; } }
     .footer__social a {
       padding: 0 1.5rem; }
 
 /*   WELCOME   */
 .welcome {
-  height: calc(100vh - 74.05px);
+  height: calc(100vh - 75.13px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,14 +485,15 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  gap: 4rem; }
   .categories .flex-row article {
     align-items: center;
     position: relative;
     animation: float 0.5s ease-in-out infinite alternate; }
     .categories .flex-row article .btn-secundario {
       position: absolute;
-      bottom: 0;
+      bottom: -1rem;
       text-transform: lowercase;
       font-style: italic; }
     .categories .flex-row article img {
