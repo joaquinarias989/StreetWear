@@ -1,0 +1,26 @@
+$primary: #ffda07;
+$secondary: #157097;
+$border-radius: 2px;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+);
+
+// TODO Bootstrap
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+
+//Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+
+//Opcionales
+
+// @import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/transitions";
