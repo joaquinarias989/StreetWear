@@ -40,17 +40,31 @@
       padding: 3rem 2rem;
     }
   }
+}
 
+.login {
+  .modal-content {
+    .title-primary {
+      padding: 0.2rem 0rem;
+      font-size: 1.3em;
+      background: none;
+    }
+    .input__box {
+      font-size: 0.55em;
+      margin: 0;
+    }
+  }
+}
+.register {
   > p {
     margin: 3rem 0;
     color: $white;
     font-size: 1.8em;
     position: relative;
   }
-}
-
-.register .text-leftline::before {
-  @include breakpoint(sm) {
-    width: 0;
+  .text-leftline::before {
+    @include breakpoint(sm) {
+      width: 0;
+    }
   }
 }

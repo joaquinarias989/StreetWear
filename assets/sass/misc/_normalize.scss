@@ -96,6 +96,19 @@ select {
     box-shadow: 0 0 0 0.25rem #ffda075b;
   }
 }
+.modal-content {
+  font-size: 1.8em;
+  button {
+    font-size: 1em;
+  }
+  .btn-secundario {
+    border-radius: 2px;
+    background: #a9a9a9;
+    &:hover {
+      background: #e2e2e2;
+    }
+  }
+}
 
 main {
   min-height: calc(100vh - 75.13px);

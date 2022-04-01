@@ -79,6 +79,16 @@ select {
     outline: 0;
     box-shadow: 0 0 0 0.25rem #ffda075b; }
 
+.modal-content {
+  font-size: 1.8em; }
+  .modal-content button {
+    font-size: 1em; }
+  .modal-content .btn-secundario {
+    border-radius: 2px;
+    background: #a9a9a9; }
+    .modal-content .btn-secundario:hover {
+      background: #e2e2e2; }
+
 main {
   min-height: calc(100vh - 75.13px); }
 
@@ -126,6 +136,9 @@ main {
 /*    TEXT & BACKGROUNDS    */
 .bg-bricks {
   background: url(../img/bricks.webp); }
+
+.bckg-primary {
+  background: #ffda07; }
 
 .bg-light {
   background: #f4f4f4; }
@@ -899,12 +912,21 @@ header {
     .login .form__paper,
     .register .form__paper {
       padding: 3rem 2rem; } }
-  .login > p,
-  .register > p {
-    margin: 3rem 0;
-    color: #fff;
-    font-size: 1.8em;
-    position: relative; }
+
+.login .modal-content .title-primary {
+  padding: 0.2rem 0rem;
+  font-size: 1.3em;
+  background: none; }
+
+.login .modal-content .input__box {
+  font-size: 0.55em;
+  margin: 0; }
+
+.register > p {
+  margin: 3rem 0;
+  color: #fff;
+  font-size: 1.8em;
+  position: relative; }
 
 @media (max-width: 425px) {
   .register .text-leftline::before {
