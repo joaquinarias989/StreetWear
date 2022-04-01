@@ -71,13 +71,6 @@ select {
   transition: all 0.1s ease-in-out; }
   .form-check-input:hover {
     border-color: #ffda07; }
-  .form-check-input:checked {
-    background-color: #ffda07;
-    border-color: #ffda07; }
-  .form-check-input:focus {
-    border-color: #ffda07;
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem #ffda075b; }
 
 .modal-content {
   font-size: 1.8em; }
@@ -605,12 +598,7 @@ header {
     font-size: 1.6em; }
     .about__content .accordion-button {
       font-size: 0.9em;
-      transition: all 0.3s ease-in-out; }
-      .about__content .accordion-button:not(.collapsed), .about__content .accordion-button:focus {
-        color: #000;
-        box-shadow: inset 0 -1px 0 rgba(240, 236, 16, 0.664);
-        border: none;
-        background: #faf2b6; }
+      font-weight: bolder; }
   .about__icons {
     color: #ffda07;
     font-size: 5em;
