@@ -263,12 +263,13 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 0.5rem;
-        font-size: 1.8em;
+        font-size: 1.9em;
         font-weight: bold;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         i {
+          font-size: 1.15em;
           transition: all 0.3s ease-in-out;
         }
 

@@ -88,6 +88,9 @@ main {
 .row {
   --bs-gutter-x: 0; }
 
+i.fa-money-bill-alt {
+  transform: rotate(-5deg) !important; }
+
 /*   HELPERS   */
 .container {
   /* max-width: 1320px; */
@@ -317,11 +320,12 @@ main {
         align-items: center;
         flex-wrap: wrap;
         gap: 0.5rem;
-        font-size: 1.8em;
+        font-size: 1.9em;
         font-weight: bold;
         cursor: pointer;
         transition: all 0.3s ease-in-out; }
         .product__card__info .product__card__btn .btn-cart i {
+          font-size: 1.15em;
           transition: all 0.3s ease-in-out; }
         .product__card__info .product__card__btn .btn-cart:hover i {
           color: #ffda07;
@@ -885,6 +889,23 @@ header {
     font-size: 6em;
     color: #ffda07;
     gap: 3rem; }
+    .login .icons i,
+    .register .icons i {
+      position: relative; }
+      .login .icons i:first-child,
+      .register .icons i:first-child {
+        bottom: 1rem;
+        right: 10rem;
+        transform: rotate(-5deg); }
+      .login .icons i:last-child,
+      .register .icons i:last-child {
+        top: 1rem;
+        left: 5rem;
+        transform: rotate(15deg); }
+      @media (max-width: 1199px) {
+        .login .icons i,
+        .register .icons i {
+          position: initial; } }
     @media (max-width: 767px) {
       .login .icons,
       .register .icons {

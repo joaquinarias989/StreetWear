@@ -7,6 +7,25 @@
     font-size: 6em;
     color: $primary;
     gap: 3rem;
+
+    i {
+      position: relative;
+
+      &:first-child {
+        bottom: 1rem;
+        right: 10rem;
+        transform: rotate(-5deg);
+      }
+      &:last-child {
+        top: 1rem;
+        left: 5rem;
+        transform: rotate(15deg);
+      }
+      @include breakpoint(lg) {
+        position: initial;
+      }
+    }
+
     @include breakpoint(md) {
       padding-top: 5rem;
     }
