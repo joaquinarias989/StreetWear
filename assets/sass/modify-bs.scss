@@ -11,16 +11,18 @@ $theme-colors: (
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 
 //Required
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities";
 
 //Opcionales
 
-// @import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+// (paddings, margins y algunos sizes)
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/forms/form-check";
+@import "../../node_modules/bootstrap/scss/modal";
 @import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/carousel";
 @import "../../node_modules/bootstrap/scss/transitions";

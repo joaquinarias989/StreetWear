@@ -1,7 +1,7 @@
 /*   WELCOME   */
 .welcome {
   height: calc(100vh - 75.13px);
-  @include flex(center, center, null);
+  @include flex(null, center, center, null);
   background: url(../img/welcome-garage-2.webp) center center fixed no-repeat;
   background-size: cover;
   border-bottom: 5px solid $primary;
@@ -152,11 +152,10 @@
     }
     .accordion {
       width: 100%;
-      font-size: 1.6em;
+      font-size: 1.7em;
 
       &-button {
-        font-size: 0.9em;
-        font-weight: bolder;
+        font-size: 1.05em;
       }
     }
   }

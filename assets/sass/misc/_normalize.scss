@@ -13,8 +13,8 @@
   border: none;
   outline: none;
   vertical-align: baseline;
-  *::after,
-  *::before {
+  ::after,
+  ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -86,15 +86,6 @@ select {
   &:hover {
     border-color: $primary;
   }
-  // &:checked {
-  //   background-color: $primary;
-  //   border-color: $primary;
-  // }
-  // &:focus {
-  //   border-color: $primary;
-  //   outline: 0;
-  //   box-shadow: 0 0 0 0.25rem #ffda075b;
-  // }
 }
 .modal-content {
   font-size: 1.8em;

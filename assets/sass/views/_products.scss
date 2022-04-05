@@ -5,7 +5,7 @@
   .section__header {
     i {
       font-size: 2.5em;
-      padding: 1.5rem 0.9rem;
+      padding: 1.5rem 0 1.5rem 2rem;
       transition: all 0.2s ease-in-out;
 
       &:hover {
@@ -14,13 +14,13 @@
     }
 
     .dropdown-menu {
-      font-size: 1.8em;
+      font-size: 1.9em;
       min-width: 30rem;
       max-height: 50rem;
       overflow: auto;
 
       h5 {
-        font-size: 1.3em;
+        font-size: 1.2em;
         padding: 0.2rem 0;
         width: 100%;
       }

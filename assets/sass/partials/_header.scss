@@ -34,17 +34,16 @@ header {
           content: "";
           position: absolute;
           height: 0;
-          width: 0;
-          background: #e2e2e2;
+          width: 3px;
+          background: $primary;
           right: -5px;
           top: 0;
           bottom: 0;
           margin: auto;
-          transition: height 0.2s ease-out, background 0.5s ease-out;
+          transition: height 0.25s ease-in-out;
         }
         &:not(.menu__link--active):hover::after {
           height: 50%;
-          width: 3px;
           background: $primary;
         }
         &--active::after {

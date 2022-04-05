@@ -115,7 +115,7 @@
 /*    BUTTONS    */
 
 .btn-principal {
-  @include flex(center, center, 0.5rem);
+  @include flex(null, center, center, 0.5rem);
   background: $primary;
   color: $black;
   border-radius: 2px;
@@ -131,7 +131,7 @@
   }
 }
 .btn-secundario {
-  @include flex(center, center, 0.5rem);
+  @include flex(null, center, center, 0.5rem);
   background: $white;
   color: $black;
   border-radius: 0;
@@ -178,13 +178,21 @@
 
 .product__card {
   position: relative;
-  max-width: 100%;
-
+  // flex-basis: clamp(15%, calc(20% - 2rem), 100%);
+  width: clamp(30rem, calc(20% - 2rem), 100rem);
+  @include breakpoint(lg) {
+    width: clamp(25rem, calc(33.33% - 2rem), 100rem);
+  }
+  @include breakpoint(md) {
+    width: clamp(25rem, calc(50% - 2rem), 100rem);
+  }
+  @include breakpoint(sm) {
+    width: clamp(15rem, 100%, 30rem);
+  }
   a {
-    width: 325px;
-    max-width: 100%;
+    width: 100%;
     border-radius: 2px;
-    box-shadow: 1px 5px 10px #b1b1b18e;
+    box-shadow: 1px 5px 10px #cccccc8e;
     overflow: hidden;
     color: $black;
     transition: all 0.5s ease-in-out;
@@ -194,7 +202,7 @@
   }
 
   &__img {
-    height: 400px;
+    height: 40rem;
 
     img {
       height: 100%;
@@ -213,9 +221,13 @@
     transition: all 0.3s ease-in-out;
 
     .product__card__title {
+      width: 100%;
       font-size: 2.3em;
       position: relative;
-      z-index: 100;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      z-index: 0;
 
       &::after {
         content: "";
@@ -225,7 +237,7 @@
         width: 100%;
         height: 5px;
         background: $primary;
-        z-index: -100;
+        z-index: -1;
         transition: all 0.3s ease-in-out;
       }
     }
@@ -249,6 +261,7 @@
         display: flex;
         justify-content: end;
         align-items: center;
+        flex-wrap: wrap;
         gap: 0.5rem;
         font-size: 1.8em;
         font-weight: bold;
@@ -297,7 +310,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: #{map-get($breakpoints, md)}) {
   .title-underlined {
     font-size: 4em;
   }

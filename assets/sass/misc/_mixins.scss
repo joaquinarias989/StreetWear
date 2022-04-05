@@ -6,9 +6,10 @@
   }
 }
 
-@mixin flex($justify, $align, $gap) {
+@mixin flex($direc, $jc, $algn, $gap) {
   display: flex;
-  justify-content: $justify;
-  align-items: $align;
+  flex-direction: $direc;
+  justify-content: $jc;
+  align-items: $algn;
   gap: $gap;
 }
