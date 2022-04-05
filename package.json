@@ -1,12 +1,12 @@
 {
-  "name": "streetwear-08-03",
+  "name": "streetwear",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-sass": "node-sass --include-path scss assets/sass/index.scss assets/css/index.css",
-    "build-sass-bs": "node-sass --include-path scss assets/sass/modify-bs.scss assets/css/bootstrap.css",
+    "build-sass-bs": "node-sass --include-path scss assets/sass/bootstrap.scss assets/css/bootstrap.css",
     "watch-sass": "nodemon -e scss -x \"npm run build-sass\"",
     "watch-sass-bs": "nodemon -e scss -x \"npm run build-sass-bs\""
   },
