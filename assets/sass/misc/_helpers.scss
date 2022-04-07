@@ -1,9 +1,9 @@
 /*   HELPERS   */
 
 .container {
-  /* max-width: 1320px; */
-  max-width: 1750px;
+  // max-width: 1750px;
   width: 90%;
+  max-width: 145rem;
   margin: 0 auto;
   overflow: hidden;
 
@@ -93,7 +93,7 @@
 }
 .text-overline::before {
   @extend .pseudo;
-  height: 7px;
+  height: 35%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -178,16 +178,10 @@
 
 .product__card {
   position: relative;
-  // flex-basis: clamp(15%, calc(20% - 2rem), 100%);
-  width: clamp(30rem, calc(20% - 2rem), 100rem);
-  @include breakpoint(lg) {
-    width: clamp(25rem, calc(33.33% - 2rem), 100rem);
-  }
+  min-width: 15rem;
+  width: clamp(15rem, calc((145rem / 4) - 2rem), 100rem);
   @include breakpoint(md) {
-    width: clamp(25rem, calc(50% - 2rem), 100rem);
-  }
-  @include breakpoint(sm) {
-    width: clamp(15rem, 100%, 30rem);
+    width: clamp(30rem, calc(50% - 2rem), 100rem);
   }
   a {
     width: 100%;
@@ -195,10 +189,20 @@
     box-shadow: 1px 5px 10px #cccccc8e;
     overflow: hidden;
     color: $black;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    transform-origin: left;
   }
-  &:hover a {
-    box-shadow: -5px -5px 10px 3px #c9c9c98e;
+  &:hover {
+    z-index: 100;
+
+    a {
+      box-shadow: -5px -5px 10px 3px #a3a3a38e;
+      transform: scale(1.05) rotate(1deg);
+
+      @include breakpoint(sm) {
+        transform: scale(1) rotate(1deg);
+      }
+    }
   }
 
   &__img {
@@ -300,6 +304,7 @@
     font-weight: bold;
     letter-spacing: 1px;
     box-shadow: 4px 5px 0px #041922;
+    z-index: 100;
 
     @include breakpoint(sm) {
       right: -5px;

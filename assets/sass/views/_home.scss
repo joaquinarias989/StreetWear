@@ -182,12 +182,12 @@
   article {
     .title-primary {
       writing-mode: vertical-lr;
-      transform: rotate(180deg);
+      transform: rotate(180deg) scale(1.1);
       z-index: 30;
       padding: 4rem 0.2rem;
     }
     .form__paper {
-      flex-basis: 60%;
+      flex-basis: 55%;
 
       .btn-principal {
         width: 100%;

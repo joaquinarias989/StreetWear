@@ -9,37 +9,64 @@
     @include breakpoint(md) {
       flex-direction: column-reverse;
       font-size: 1.7em;
-      gap: 10rem;
+      gap: 8rem;
     }
   }
 
   &__data {
     h2 {
-      font-size: 1.3em;
       position: relative;
+      font-size: 1.3em;
+    }
+    .accordion-button {
+      font-size: 1em;
+      font-weight: bold;
+      padding: 0.5rem 0;
+      color: $black;
+
+      &:not(.collapsed) {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+      }
+      &:focus {
+        box-shadow: none;
+      }
     }
 
-    .cart__ship p {
-      padding: 0.5rem 0;
+    .cart__ship div {
       flex-wrap: wrap;
-      gap: 2rem;
 
       span {
         font-weight: bold;
         position: relative;
-        font-size: 1.1em;
+        font-size: 1.2em;
         text-align: right;
-        align-self: flex-end;
-        justify-items: end;
+        margin-left: auto;
       }
     }
 
     .cart__personal {
-      p {
-        font-size: 0.9em;
-      }
       .flex-row {
         gap: 1rem;
+      }
+    }
+
+    .cart__fact {
+      .checkbox__box {
+        position: relative;
+
+        input[type="checkbox"] {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -2.6rem;
+          min-width: 1em;
+
+          @include breakpoint(md) {
+            position: initial;
+          }
+        }
       }
     }
 
@@ -54,21 +81,25 @@
 
     @include breakpoint(sm) {
       h2 {
-        text-align: center;
+        span {
+          width: 100%;
+          text-align: center;
+        }
       }
 
       .text-leftline::before {
         left: 0;
+        z-index: 4;
       }
     }
   }
 
   &__resume {
-    gap: 2rem;
+    gap: 3rem;
 
     &__products {
       gap: 1rem;
-      max-height: 310px;
+      max-height: 33rem;
       overflow: auto;
 
       .cart__product {
@@ -84,6 +115,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 2px;
           }
         }
 
@@ -105,11 +137,10 @@
     }
 
     .cart__subtotal {
-      margin: 2rem 0;
       padding: 2rem 0;
+      gap: 1rem;
       border-top: 2px solid #dedede;
       border-bottom: 2px solid #dedede;
-      gap: 1rem;
 
       h4 {
         font-size: 1em;
@@ -123,7 +154,7 @@
     .cart__total h2 {
       position: relative;
       padding: 0 1.5rem;
-      font-size: 1.7em;
+      font-size: 1.6em;
     }
   }
 }

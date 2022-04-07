@@ -1,13 +1,14 @@
 $primary: #ffda07;
 $secondary: #157097;
 $border-radius: 2px;
+$accordion-icon-active-color: #816d00;
 
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
 );
 
-// TODO Bootstrap
+// Todo Bootstrap
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 
 //Required
@@ -15,7 +16,6 @@ $theme-colors: (
 
 //Opcionales
 
-// (paddings, margins y algunos sizes)
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../../node_modules/bootstrap/scss/navbar";

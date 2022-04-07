@@ -85,15 +85,162 @@
         <h1 class="title-primary">Iniciar Compra</h1>
         <div class="row justify-content-between w-100">
           <article class="cart__data col-md-6 flex-column">
-            <div class="cart__ship">
+            <div id="accordionData">
+              <div class="cart__ship">
+                <h2 class="text-leftline" id="panelsStayOpen-headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"
+                  >
+                    <span>Entrega</span>
+                  </button>
+                </h2>
+
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne"
+                >
+                  <div class="flex-row jc-between algn-items-center mt-4">
+                    <p>Correo Argentino - Envío a Domicilio</p>
+                    <span class="text-overline">$ 475</span>
+                  </div>
+                </div>
+              </div>
+              <form action="#">
+                <div class="cart__personal mt-5">
+                  <h2 class="text-leftline mb-1" id="panelsStayOpen-headingTwo">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseTwo"
+                      aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseTwo"
+                    >
+                      <span>Datos del Destinatario</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseTwo"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingTwo"
+                  >
+                    <p class="text-end">
+                      ¿Ya tenes cuenta?
+                      <a href="./login.html" class="text-accent"
+                        >¡Iniciá sesión!</a
+                      >
+                    </p>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form__input"
+                      placeholder="Email"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="name"
+                      class="form__input"
+                      placeholder="Nombre y Apellido"
+                      required
+                    />
+                    <div class="flex-row jc-between">
+                      <input
+                        type="number"
+                        name="codpostal"
+                        class="form__input"
+                        placeholder="Cód. Postal"
+                        required
+                      />
+                      <select name="provincia" class="form__input" required>
+                        <option value="cba" selected disabled>Provincia</option>
+                        <option value="cba">Córdoba</option>
+                        <option value="bsas">Buenos Aires</option>
+                        <option value="stafe">Santa Fe</option>
+                      </select>
+                    </div>
+                    <input
+                      type="text"
+                      name="address"
+                      class="form__input"
+                      placeholder="Domicilio"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="department"
+                      class="form__input"
+                      placeholder="Departamento (opcional)"
+                    />
+                    <input
+                      type="number"
+                      name="phone"
+                      class="form__input"
+                      placeholder="Télefono"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="cart__fact mt-5">
+                  <h2
+                    class="text-leftline mb-4"
+                    id="panelsStayOpen-headingThree"
+                  >
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseThree"
+                      aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseThree"
+                    >
+                      <span>Datos de Facturación</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseThree"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingThree"
+                  >
+                    <input
+                      type="number"
+                      name="dni"
+                      class="form__input"
+                      placeholder="DNI ó CUIL"
+                      required
+                    />
+                    <div class="checkbox__box d-flex gap-2">
+                      <input
+                        type="checkbox"
+                        name="check"
+                        class="form-check-input"
+                      />
+                      <label for="check"
+                        >Mis datos de facturación y entrega son los mismos
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn-principal mt-5 w-100">
+                  <i class="fa fa-money-bill-alt"></i>
+                  Continuar al pago
+                </button>
+              </form>
+            </div>
+            <!-- <div class="cart__ship">
               <h2 class="text-leftline mb-4">Entrega</h2>
               <p class="flex-row jc-between algn-items-center">
-                Correo Argentino - Envío a Domicilio
+                Correo Argentino - A Domicilio
                 <span class="text-overline">$ 475</span>
               </p>
-            </div>
-            <form action="">
-              <div class="cart__personal mt-4 mb-1">
+            </div> -->
+            <!-- <div class="cart__personal mt-4 mb-1">
                 <h2 class="text-leftline mb-1">Datos del Destinatario</h2>
                 <p class="text-end mt-3 mt-sm-2">
                   ¿Ya tenes cuenta?
@@ -148,8 +295,8 @@
                   placeholder="Télefono"
                   required
                 />
-              </div>
-              <div class="cart__fact mt-5">
+              </div> -->
+            <!-- <div class="cart__fact mt-5">
                 <h2 class="text-leftline mb-4">Datos de Facturación</h2>
                 <input
                   type="number"
@@ -168,12 +315,7 @@
                     >Mis datos de facturación y entrega son los mismos
                   </label>
                 </div>
-              </div>
-              <button type="submit" class="btn-principal mt-5 w-100">
-                <i class="fa fa-money-bill-alt"></i>
-                Continuar al pago
-              </button>
-            </form>
+              </div> -->
           </article>
           <article
             class="cart__resume ps-md-5 ps-xl-0 col-md-6 col-xl-4 flex-column"
@@ -215,7 +357,9 @@
                 Costo de Envío <span>$ 475</span>
               </h4>
             </div>
-            <div class="cart__total flex-row jc-between algn-items-center">
+            <div
+              class="cart__total flex-row flex-wrap jc-between algn-items-center"
+            >
               <h2 class="text-overline">TOTAL</h2>
               <h2 class="text-overline">$ 2475</h2>
             </div>
@@ -248,8 +392,9 @@
             </a>
           </article>
           <article class="product__card ganga">
+            <span class="offer">GANGA!</span>
+
             <a href="./product.html">
-              <span class="offer">GANGA!</span>
               <div class="product__card__img">
                 <img
                   src="../img/campera.jpg"
