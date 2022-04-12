@@ -18,6 +18,7 @@
       min-width: 30rem;
       max-height: 50rem;
       overflow: auto;
+      transition: min-width 0.3s ease-in-out;
 
       h5 {
         font-size: 1.2em;

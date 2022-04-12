@@ -1,7 +1,6 @@
 /*   HELPERS   */
 
 .container {
-  // max-width: 1750px;
   width: 90%;
   max-width: 145rem;
   margin: 0 auto;
@@ -17,9 +16,6 @@
 .flex-column {
   display: flex;
   flex-direction: column;
-}
-.flex-wrap {
-  flex-wrap: wrap;
 }
 .algn-items-center {
   align-items: center;
@@ -44,11 +40,9 @@
 /*    TEXT & BACKGROUNDS    */
 
 .bg-bricks {
-  background: url(../img/bricks.webp);
+  background: url(../img/bricks.webp) no-repeat;
 }
-.bckg-primary {
-  background: $primary;
-}
+
 .bg-light {
   background: #f4f4f4;
 }
@@ -179,10 +173,12 @@
 .product__card {
   position: relative;
   min-width: 15rem;
-  width: clamp(15rem, calc((145rem / 4) - 2rem), 100rem);
+  width: clamp(30rem, calc((101% / 4) - 2rem), 100%);
+
   @include breakpoint(md) {
-    width: clamp(30rem, calc(50% - 2rem), 100rem);
+    width: clamp(30rem, calc(51% - 2rem), 100%);
   }
+
   a {
     width: 100%;
     border-radius: 2px;
@@ -191,18 +187,6 @@
     color: $black;
     transition: all 0.2s ease-in-out;
     transform-origin: left;
-  }
-  &:hover {
-    z-index: 100;
-
-    a {
-      box-shadow: -5px -5px 10px 3px #a3a3a38e;
-      transform: scale(1.05) rotate(1deg);
-
-      @include breakpoint(sm) {
-        transform: scale(1) rotate(1deg);
-      }
-    }
   }
 
   &__img {
@@ -213,10 +197,6 @@
       object-fit: cover;
       transition: all 0.3s ease-in-out;
     }
-  }
-  &:hover &__img img {
-    width: 125%;
-    height: 140%;
   }
 
   &__info {
@@ -284,14 +264,6 @@
       }
     }
   }
-  &:hover &__title::after {
-    width: 90%;
-  }
-
-  &:hover &__info,
-  &:hover .btn-cart {
-    color: $white;
-  }
 
   .offer {
     position: absolute;
@@ -311,12 +283,26 @@
       font-size: 1.4em;
     }
   }
-  &:hover .offer {
-    animation: float 0.4s ease-in-out infinite alternate;
+
+  &:hover {
+    .product__card__img img {
+      width: 125%;
+      height: 140%;
+    }
+    .product__card__title::after {
+      width: 90%;
+    }
+    .product__card__info,
+    .btn-cart {
+      color: $white;
+    }
+    .offer {
+      animation: float 0.4s ease-in-out infinite alternate;
+    }
   }
 }
 
-@media screen and (max-width: #{map-get($breakpoints, md)}) {
+@include breakpoint(md) {
   .title-underlined {
     font-size: 4em;
   }

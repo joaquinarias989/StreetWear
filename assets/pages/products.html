@@ -60,7 +60,7 @@
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0 flex-row jc-between">
             <li class="dropdown-link">
-              <a class="menu__link" role="button"
+              <a class="menu__link" role="button" aria-label="Cuenta de Usuario"
                 ><i class="fas fa-user text-white"></i
               ></a>
               <ul class="sub-menu bg-bricks">
@@ -73,7 +73,10 @@
               </ul>
             </li>
             <li>
-              <a href="cart.html" class="menu__link"
+              <a
+                href="cart.html"
+                class="menu__link"
+                aria-label="Carrito de compras"
                 ><i class="fas fa-shopping-bag text-white"></i
               ></a>
             </li>
@@ -99,6 +102,7 @@
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                aria-label="Filtrar productos"
               >
                 <i class="fa fa-filter"></i>
               </button>
@@ -178,7 +182,10 @@
                 <h4 class="product__card__title">Remera Phenomenally</h4>
                 <h4 class="product__card__price">$ 2380</h4>
                 <div class="product__card__btn flex-row">
-                  <button class="btn-cart">
+                  <button
+                    class="btn-cart"
+                    aria-label="Agregar producto al carrito"
+                  >
                     Agregar al carrito <i class="fa fa-cart-plus"></i>
                   </button>
                 </div>
@@ -197,7 +204,10 @@
                 <h4 class="product__card__title">Remera F*cking Awesome</h4>
                 <h4 class="product__card__price">$ 2499</h4>
                 <div class="product__card__btn flex-row">
-                  <button class="btn-cart">
+                  <button
+                    class="btn-cart"
+                    aria-label="Agregar producto al carrito"
+                  >
                     Agregar al carrito <i class="fa fa-cart-plus"></i>
                   </button>
                 </div>
@@ -216,7 +226,10 @@
                 <h4 class="product__card__title">Buzo Chineze</h4>
                 <h4 class="product__card__price">$ 4630</h4>
                 <div class="product__card__btn flex-row">
-                  <button class="btn-cart">
+                  <button
+                    class="btn-cart"
+                    aria-label="Agregar producto al carrito"
+                  >
                     Agregar al carrito <i class="fa fa-cart-plus"></i>
                   </button>
                 </div>
@@ -238,26 +251,10 @@
                 <h4 class="product__card__price">$ 3700<span>$ 5000</span></h4>
 
                 <div class="product__card__btn flex-row">
-                  <button class="btn-cart">
-                    Agregar al carrito <i class="fa fa-cart-plus"></i>
-                  </button>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="product__card">
-            <a href="./product.html">
-              <div class="product__card__img">
-                <img
-                  src="../img/buzo 2.jpg"
-                  alt="Hombre sentado en una silla, vistiendo un buzo marca Levis, de color negro y rojo."
-                />
-              </div>
-              <div class="product__card__info">
-                <h4 class="product__card__title">Buzo Levis</h4>
-                <h4 class="product__card__price">$ 4900</h4>
-                <div class="product__card__btn flex-row">
-                  <button class="btn-cart">
+                  <button
+                    class="btn-cart"
+                    aria-label="Agregar producto al carrito"
+                  >
                     Agregar al carrito <i class="fa fa-cart-plus"></i>
                   </button>
                 </div>
@@ -267,7 +264,7 @@
         </div>
 
         <div class="flex-row jc-center algn-items-center">
-          <button class="btn-principal">
+          <button class="btn-principal" aria-label="Cargar más productos">
             <i class="fas fa-plus"></i> Cargar más
           </button>
         </div>
@@ -277,7 +274,9 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__info flex-column flex-md-row">
-          <a href="../../index.html"><i class="fas fa-home"></i></a>
+          <a href="../../index.html" aria-label="Navegar a la página de inicio"
+            ><i class="fas fa-home"></i
+          ></a>
 
           <div class="footer__payment flex-column">
             <h4>Todos los métodos de pago</h4>
@@ -291,14 +290,36 @@
             <span>STREET</span><span>WEAR</span>
           </div>
           <h4>&copy; 2022 Derechos Reservados</h4>
-          <a href="#"><i class="fas fa-arrow-up"></i></a>
+          <a href="#" aria-label="Ir al comienzo de la página"
+            ><i class="fas fa-arrow-up"></i
+          ></a>
         </div>
 
         <div class="footer__social flex-row">
-          <a href="#" class="fab fa-facebook" target="_blank"></a>
-          <a href="#" class="fab fa-instagram" target="_blank"></a>
-          <a href="#" class="fab fa-twitter" target="_blank"></a>
-          <a href="#" class="fa fa-share" target="_blank"></a>
+          <a
+            href="#"
+            class="fab fa-facebook"
+            target="_blank"
+            aria-label="Facebook"
+          ></a>
+          <a
+            href="#"
+            class="fab fa-instagram"
+            target="_blank"
+            aria-label="Instagram"
+          ></a>
+          <a
+            href="#"
+            class="fab fa-twitter"
+            target="_blank"
+            aria-label="Twitter"
+          ></a>
+          <a
+            href="#"
+            class="fa fa-share"
+            target="_blank"
+            aria-label="Compartir"
+          ></a>
         </div>
       </div>
     </footer>

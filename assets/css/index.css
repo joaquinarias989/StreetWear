@@ -109,9 +109,6 @@ i.fa-money-bill-alt {
   display: flex;
   flex-direction: column; }
 
-.flex-wrap {
-  flex-wrap: wrap; }
-
 .algn-items-center {
   align-items: center; }
 
@@ -131,10 +128,7 @@ i.fa-money-bill-alt {
 
 /*    TEXT & BACKGROUNDS    */
 .bg-bricks {
-  background: url(../img/bricks.webp); }
-
-.bckg-primary {
-  background: #ffda07; }
+  background: url(../img/bricks.webp) no-repeat; }
 
 .bg-light {
   background: #f4f4f4; }
@@ -255,10 +249,10 @@ i.fa-money-bill-alt {
 .product__card {
   position: relative;
   min-width: 15rem;
-  width: clamp(15rem, calc((145rem / 4) - 2rem), 100rem); }
+  width: clamp(30rem, calc((101% / 4) - 2rem), 100%); }
   @media (max-width: 767px) {
     .product__card {
-      width: clamp(30rem, calc(50% - 2rem), 100rem); } }
+      width: clamp(30rem, calc(51% - 2rem), 100%); } }
   .product__card a {
     width: 100%;
     border-radius: 2px;
@@ -267,23 +261,12 @@ i.fa-money-bill-alt {
     color: #000;
     transition: all 0.2s ease-in-out;
     transform-origin: left; }
-  .product__card:hover {
-    z-index: 100; }
-    .product__card:hover a {
-      box-shadow: -5px -5px 10px 3px #a3a3a38e;
-      transform: scale(1.05) rotate(1deg); }
-      @media (max-width: 425px) {
-        .product__card:hover a {
-          transform: scale(1) rotate(1deg); } }
   .product__card__img {
     height: 40rem; }
     .product__card__img img {
       height: 100%;
       object-fit: cover;
       transition: all 0.3s ease-in-out; }
-  .product__card:hover .product__card__img img {
-    width: 125%;
-    height: 140%; }
   .product__card__info {
     background: #fff;
     padding: 1.5rem;
@@ -332,11 +315,6 @@ i.fa-money-bill-alt {
         .product__card__info .product__card__btn .btn-cart:hover i {
           color: #ffda07;
           animation: float 0.4s ease-in-out infinite alternate; }
-  .product__card:hover .product__card__title::after {
-    width: 90%; }
-  .product__card:hover .product__card__info,
-  .product__card:hover .btn-cart {
-    color: #fff; }
   .product__card .offer {
     position: absolute;
     top: 10px;
@@ -353,10 +331,18 @@ i.fa-money-bill-alt {
       .product__card .offer {
         right: -5px;
         font-size: 1.4em; } }
+  .product__card:hover .product__card__img img {
+    width: 125%;
+    height: 140%; }
+  .product__card:hover .product__card__title::after {
+    width: 90%; }
+  .product__card:hover .product__card__info,
+  .product__card:hover .btn-cart {
+    color: #fff; }
   .product__card:hover .offer {
     animation: float 0.4s ease-in-out infinite alternate; }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .title-underlined {
     font-size: 4em; }
   .title-primary {
@@ -523,7 +509,7 @@ header {
       text-transform: lowercase;
       font-style: italic; }
     .categories .flex-row article img {
-      max-width: 350px; }
+      max-width: 35rem; }
 
 /*   HELP   */
 .help {
@@ -687,7 +673,8 @@ header {
     font-size: 1.9em;
     min-width: 30rem;
     max-height: 50rem;
-    overflow: auto; }
+    overflow: auto;
+    transition: min-width 0.3s ease-in-out; }
     .products .section__header .dropdown-menu h5 {
       font-size: 1.2em;
       padding: 0.2rem 0;
@@ -734,10 +721,10 @@ header {
       .product__main .product__details .product__description {
         position: relative;
         margin-bottom: 4rem; }
-        .product__main .product__details .product__description::before {
+        .product__main .product__details .product__description::after {
           content: "";
-          width: 70%;
-          background: rgba(0, 0, 0, 0.3);
+          width: 60%;
+          background: #c6c6c6;
           height: 3px;
           position: absolute;
           bottom: -3rem;
@@ -945,15 +932,19 @@ header {
     font-size: 1.9em; }
   .login .form__paper > a,
   .register .form__paper > a {
-    font-size: 1.6em;
-    margin: -1rem 0 0 0; }
+    font-size: 1.7em;
+    margin-top: -1rem; }
   .login .form__paper p,
   .register .form__paper p {
+    margin-top: 0.5rem;
     font-size: 1.7em; }
   @media (max-width: 425px) {
     .login .form__paper,
     .register .form__paper {
       padding: 3rem 2rem; } }
+
+.login .modal-content .modal-body {
+  padding: 2rem; }
 
 .login .modal-content .title-primary {
   padding: 0.2rem 0rem;

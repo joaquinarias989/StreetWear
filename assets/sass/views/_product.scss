@@ -42,10 +42,10 @@
         position: relative;
         margin-bottom: 4rem;
 
-        &::before {
+        &::after {
           content: "";
-          width: 70%;
-          background: rgba(0, 0, 0, 0.3);
+          width: 60%;
+          background: #c6c6c6;
           height: 3px;
           position: absolute;
           bottom: -3rem;
