@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/aos.css" />
   </head>
   <body class="grid-rows-4">
     <header class="bg-bricks">
@@ -26,6 +27,8 @@
             <img
               src="../img/logo.svg"
               alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+              width="100%"
+              height="100%"
             />
           </picture>
         </a>
@@ -81,7 +84,12 @@
     </header>
 
     <main>
-      <section id="cart" class="cart container">
+      <section
+        id="cart"
+        class="cart container"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <h1 class="title-primary">Iniciar Compra</h1>
         <div class="row justify-content-between w-100">
           <article class="cart__data col-md-6 flex-column">
@@ -246,7 +254,7 @@
               <div class="cart__product flex-row algn-items-center">
                 <div class="cart__product__img">
                   <img
-                    src="../img/shirt yellow.jpg"
+                    src="../img/shirt-yellow.webp"
                     alt="Hombre parado con las manos en los bolsillos traseros, vistiendo una remera negra con el texto Phenomenally Black"
                   />
                 </div>
@@ -259,7 +267,7 @@
               <div class="cart__product flex-row algn-items-center">
                 <div class="cart__product__img">
                   <img
-                    src="../img/buzo.jpg"
+                    src="../img/buzo.webp"
                     alt="Hombre parado con las manos en el bolsillo, mirando hacia abajo, vistiendo un buzo negro con unas letras chinas en el centro del mismo"
                   />
                 </div>
@@ -293,12 +301,16 @@
     <section id="interes" class="interes bg-bricks">
       <div class="container">
         <h2 class="title-secondary">Quizá quieras agregar...</h2>
-        <div class="interes__slide flex-row">
+        <div
+          class="interes__slide flex-row"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <article class="product__card">
             <a href="./product.html">
               <div class="product__card__img">
                 <img
-                  src="../img/tshirt 2.jpg"
+                  src="../img/tshirt-2.webp"
                   alt="Hombre parado con las manos en el bolsillo, vistiendo una remera blanca con un texto en el medio"
                 />
               </div>
@@ -323,7 +335,7 @@
             <a href="./product.html">
               <div class="product__card__img">
                 <img
-                  src="../img/campera.jpg"
+                  src="../img/campera.webp"
                   alt="Hombre de perfil, mirando hacia el frente, con las manos en el bolsillo, vistiendo una campera de jean azul claro"
                 />
               </div>
@@ -347,7 +359,7 @@
             <a href="./product.html">
               <div class="product__card__img">
                 <img
-                  src="../img/buzo 2.jpg"
+                  src="../img/buzo-2.webp"
                   alt="Hombre sentado en una silla, vistiendo un buzo marca Levis, de color negro y rojo."
                 />
               </div>
@@ -423,5 +435,10 @@
       </div>
     </footer>
   </body>
+
+  <script src="../js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="../js/bootstrap.bundle.min.js"></script>
 </html>

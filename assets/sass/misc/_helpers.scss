@@ -40,9 +40,8 @@
 /*    TEXT & BACKGROUNDS    */
 
 .bg-bricks {
-  background: url(../img/bricks.webp) no-repeat;
+  background: url(../img/bricks.webp);
 }
-
 .bg-light {
   background: #f4f4f4;
 }
@@ -144,7 +143,7 @@
 
 .form__paper {
   background: hsla(0, 0%, 100%, 0.961);
-  padding: 4rem;
+  padding: 4rem 5rem;
   border-radius: 2px;
   box-shadow: 10px 10px 8px #1f1f1f7e;
 }
@@ -152,7 +151,7 @@
   margin: 2rem 0;
 }
 .form__label {
-  font-size: 1.8em;
+  font-size: 1.75em;
 }
 .form__input {
   width: 100%;

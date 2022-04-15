@@ -65,11 +65,12 @@
       transform: rotate(5deg);
       z-index: 30;
 
-      @include breakpoint(lg) {
+      @include breakpoint(md) {
         width: 100%;
         transform: rotate(0deg);
       }
     }
+
     .help__list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -78,11 +79,23 @@
       grid-row-gap: 3rem;
       background: $light-color;
       font-size: 1.8em;
-      padding: 3rem 2rem;
+      padding: 3rem 5rem;
       margin-right: 3rem;
       box-shadow: 10px 10px 8px #1f1f1f7e;
       border-radius: 2px;
       line-height: 1.8em;
+      clip-path: polygon(
+        50% 0,
+        99% 0,
+        100% 17%,
+        99% 56%,
+        100% 97%,
+        93% 100%,
+        1% 100%,
+        0 59%,
+        0 25%,
+        0 1%
+      );
 
       .d-flex {
         align-items: center;
@@ -121,12 +134,25 @@
       }
 
       @include breakpoint(lg) {
-        margin: 0;
+        margin: 0 1rem 0 0;
       }
       @include breakpoint(md) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
         grid-row-gap: 0;
+        margin: 0;
+        clip-path: polygon(
+          5% 0%,
+          99% 0,
+          100% 17%,
+          99% 56%,
+          100% 97%,
+          80% 100%,
+          1% 100%,
+          0 59%,
+          0 25%,
+          0 1%
+        );
       }
       @include breakpoint(sm) {
         padding: 1rem;
@@ -150,12 +176,71 @@
         transform: rotate(0);
       }
     }
-    .accordion {
-      width: 100%;
-      font-size: 1.7em;
 
-      &-button {
-        font-size: 1.05em;
+    .accordion__paper {
+      width: 100%;
+      background: $light-color;
+      font-size: 1.7em;
+      padding: 3rem 5rem;
+      box-shadow: 10px 10px 8px #1f1f1f7e;
+      clip-path: polygon(
+        50% 0,
+        99% 0,
+        100% 17%,
+        99% 56%,
+        100% 97%,
+        93% 100%,
+        1% 100%,
+        0 59%,
+        0 25%,
+        0 1%
+      );
+
+      @include breakpoint(md) {
+        padding: 3rem;
+        clip-path: polygon(
+          0% 0,
+          99% 0,
+          100% 0%,
+          99% 56%,
+          100% 97%,
+          93% 100%,
+          1% 100%,
+          0 59%,
+          0 25%,
+          0 1%
+        );
+      }
+
+      h3 {
+        position: relative;
+        font-size: 1.25em;
+
+        .accordion-button {
+          background: transparent;
+          font-size: 1em;
+          padding: 0.5rem 0;
+          color: $black;
+          position: relative;
+
+          &:not(.collapsed) {
+            border-color: transparent;
+            box-shadow: none;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+
+          span {
+            position: absolute;
+            left: 0;
+            padding: 0 3rem;
+          }
+        }
+      }
+
+      p {
+        padding-top: 1.5rem;
       }
     }
   }
@@ -177,44 +262,160 @@
 }
 /*   CONTACT   */
 .contact {
-  padding: 5rem 0 10rem 0;
+  padding: 5rem 0 15rem 0;
 
-  article {
+  @include breakpoint(sm) {
+    width: 100%;
+  }
+
+  &__form {
     .title-primary {
-      writing-mode: vertical-lr;
-      transform: rotate(180deg) scale(1.1);
-      z-index: 30;
       padding: 4rem 0.2rem;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg) scale(1.05) translateX(-0.5rem);
+      z-index: 30;
     }
+
     .form__paper {
-      flex-basis: 55%;
+      flex-basis: 100%;
+      position: relative;
+      clip-path: polygon(
+        94% 0,
+        100% 8%,
+        100% 100%,
+        97% 100%,
+        0 100%,
+        0.5% 60%,
+        0 0
+      );
+
+      &::before {
+        content: "";
+        position: absolute;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
+          -1px 1px 1px rgba(0, 0, 0, 0.2);
+        border-color: #fffffff5 #fffffff5; /* color de borde */
+        border-style: solid;
+        border-width: 0 40px 40px 0;
+        right: 0;
+        top: 0;
+        width: 0;
+      }
 
       .btn-principal {
         width: 100%;
         margin-bottom: 2rem;
-        font-size: 1.9em;
-      }
-
-      @include breakpoint(md) {
-        flex-basis: 85%;
-        padding: 1rem 3rem;
+        font-size: 1.8em;
       }
     }
 
+    @include breakpoint(lg) {
+      padding-right: 4rem;
+
+      .form__paper {
+        padding: 3rem;
+        max-width: 60rem;
+      }
+    }
     @include breakpoint(sm) {
       flex-direction: column;
+      padding: 0.6rem;
 
       .title-primary {
-        flex-basis: 100%;
-        writing-mode: initial;
-        transform: rotate(0);
         width: 100%;
+        writing-mode: initial;
+        transform: rotate(0) scale(1) translateY(0.1em);
         padding: 0.2rem 0;
       }
 
       .form__paper {
         width: 100%;
-        padding: 1rem 1.5rem;
+        border: {
+          top-left-radius: 0;
+          top-right-radius: 0;
+        }
+        padding: 1rem 2rem;
+        clip-path: polygon(
+          94% 0,
+          100% 0,
+          100% 95%,
+          97% 100%,
+          0 100%,
+          0% 60%,
+          0 0
+        );
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__location {
+    .iframe__container {
+      width: 100%;
+      padding: 4.5rem;
+
+      @include breakpoint(sm) {
+        padding: 1.5rem;
+      }
+    }
+    .iframe__box {
+      background: hsla(0, 0%, 100%, 0.961);
+      position: relative;
+      width: 100%;
+      padding: 2.5rem;
+      border-radius: 1px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: rgba(255, 218, 7, 0.958);
+        width: 13rem;
+        height: 3rem;
+        top: 0rem;
+        left: -5rem;
+        transform: rotate(-40deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background: rgba(255, 218, 7, 0.958);
+        width: 13rem;
+        height: 3rem;
+        top: 0rem;
+        right: -5rem;
+        transform: rotate(40deg);
+      }
+
+      span {
+        &::before {
+          content: "";
+          position: absolute;
+          background: rgba(255, 218, 7, 0.958);
+          width: 13rem;
+          height: 3rem;
+          bottom: 0rem;
+          left: -5rem;
+          transform: rotate(40deg);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background: rgba(255, 218, 7, 0.958);
+          width: 13rem;
+          height: 3rem;
+          bottom: 0rem;
+          right: -5rem;
+          transform: rotate(-40deg);
+        }
+      }
+
+      iframe {
+        height: 40rem;
+        border: 2px solid #a2a2a22a;
+        border-radius: 2px;
       }
     }
   }

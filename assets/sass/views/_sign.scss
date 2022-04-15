@@ -32,11 +32,23 @@
   }
 
   .form__paper {
+    clip-path: polygon(
+      50% 0,
+      99% 0,
+      100% 17%,
+      99% 56%,
+      100% 97%,
+      93% 100%,
+      1% 100%,
+      0 59%,
+      0 25%,
+      0 1%
+    );
     .input__box {
       gap: 1rem;
 
       select {
-        padding: 0.45rem 0;
+        padding: 0.48rem 0;
       }
     }
 
@@ -79,6 +91,7 @@
   }
 }
 .register {
+  padding-bottom: 10rem;
   > p {
     margin: 3rem 0;
     color: $white;

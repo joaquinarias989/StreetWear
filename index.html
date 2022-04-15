@@ -31,6 +31,8 @@
             <img
               src="./assets/img/logo.svg"
               alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+              width="100%"
+              height="100%"
             />
           </picture>
         </a>
@@ -104,21 +106,36 @@
       </section>
 
       <section id="categories" class="categories container">
-        <div class="flex-row" data-aos="fade-right" data-aos-duration="3000">
+        <div class="flex-row" data-aos="fade-right" data-aos-duration="1000">
           <article class="flex-column">
-            <img src="./assets/img/hanger.svg" alt="Percha de madera clara" />
+            <img
+              src="./assets/img/hanger.svg"
+              alt="Percha de madera clara"
+              width="100%"
+              height="100%"
+            />
             <button class="btn-secundario">Abrigos</button>
           </article>
           <article class="flex-column">
-            <img src="./assets/img/hanger.svg" alt="Percha de madera clara" />
+            <img
+              src="./assets/img/hanger.svg"
+              alt="Percha de madera clara"
+              width="100%"
+              height="100%"
+            />
             <button class="btn-secundario">Remeras</button>
           </article>
           <article class="flex-column">
-            <img src="./assets/img/hanger.svg" alt="Percha de madera clara" />
+            <img
+              src="./assets/img/hanger.svg"
+              alt="Percha de madera clara"
+              width="100%"
+              height="100%"
+            />
             <button class="btn-secundario">Pantalones</button>
           </article>
         </div>
-        <div class="flex-row mt-5" data-aos="fade-up" data-aos-duration="3000">
+        <div class="flex-row mt-5" data-aos="fade-up" data-aos-duration="1000">
           <a
             href="./assets/pages/products.html"
             type="button"
@@ -135,7 +152,7 @@
           <div
             class="help__icons col-xl-3 d-flex flex-xl-column justify-content-center align-items-center flex-wrap"
             data-aos="fade-right"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
           >
             <i class="fas fa-shopping-cart"></i>
             <i class="fas fa-question"></i>
@@ -143,14 +160,14 @@
           <article
             class="help__content col-xl-9 d-flex flex-column justify-content-end align-items-end"
             data-aos="fade-left"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
           >
             <h2 class="title-primary">¿Cómo compro?</h2>
             <div class="help__list">
               <div
                 class="d-flex flex-column flex-sm-row"
                 data-aos="fade-up"
-                data-aos-duration="3000"
+                data-aos-duration="1000"
               >
                 <span class="w-25">1</span>
                 <p>
@@ -161,7 +178,7 @@
               <div
                 class="d-flex flex-column flex-sm-row"
                 data-aos="fade-down"
-                data-aos-duration="3000"
+                data-aos-duration="1000"
               >
                 <span class="w-25">2</span>
                 <p>
@@ -173,7 +190,7 @@
               <div
                 class="d-flex flex-column flex-sm-row"
                 data-aos="fade-right"
-                data-aos-duration="3000"
+                data-aos-duration="1000"
               >
                 <span class="w-25">3</span>
                 <p>
@@ -184,7 +201,7 @@
               <div
                 class="d-flex flex-column flex-sm-row"
                 data-aos="fade-left"
-                data-aos-duration="3000"
+                data-aos-duration="1000"
               >
                 <span class="w-25">4</span>
                 <p>
@@ -196,7 +213,7 @@
               <div
                 class="d-flex flex-column flex-sm-row"
                 data-aos="fade-up"
-                data-aos-duration="3000"
+                data-aos-duration="1000"
               >
                 <span class="w-25">5</span>
                 <p>
@@ -206,9 +223,9 @@
                 </p>
               </div>
               <div
-                class="d-flex flex-column flex-sm-row"
+                class="d-flex flex-column flex-sm-row my-3 my-sm-0"
                 data-aos="fade-up"
-                data-aos-duration="3000"
+                data-aos-duration="1000"
               >
                 <span class="w-25">6</span>
                 <p>
@@ -227,12 +244,12 @@
           <article
             class="about__content col-md-8 col-lg-7 d-flex flex-column align-items-start"
             data-aos="fade-right"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
           >
             <h2 class="title-primary">¿Quiénes Somos?</h2>
-            <div class="accordion ms-md-5" id="accordionExample">
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingOne">
+            <div class="accordion__paper ms-md-5" id="accordionExample">
+              <div>
+                <h3 id="headingOne">
                   <button
                     class="accordion-button"
                     type="button"
@@ -241,7 +258,7 @@
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    Nosotros
+                    <span class="text-overline">Nosotros</span>
                   </button>
                 </h3>
                 <div
@@ -250,14 +267,15 @@
                   aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <p>
                     Somos Diego Percaz y Joaquín Arias, de Arroyito Córdoba para
-                    todo el mundo.
-                  </div>
+                    todo el mundo. En la constante búsqueda de
+                    <strong>prendas únicas</strong> e increíbles.
+                  </p>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingTwo">
+              <div class="mt-5">
+                <h3 id="headingTwo">
                   <button
                     class="accordion-button collapsed"
                     type="button"
@@ -266,7 +284,7 @@
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    Inicios
+                    <span class="text-overline">Inicios</span>
                   </button>
                 </h3>
                 <div
@@ -275,16 +293,16 @@
                   aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <p>
                     En un principio arrancamos con esto para traer ropa que no
                     se conseguía accesiblemente en nuestro pueblo, por lo que
                     empezamos a salir a buscarlas a nuestro gusto y de paso ir
                     conociendo el mundo de la <strong>moda urbana</strong>.
-                  </div>
+                  </p>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingThree">
+              <div class="mt-5">
+                <h3 id="headingThree">
                   <button
                     class="accordion-button collapsed"
                     type="button"
@@ -293,7 +311,7 @@
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    Actualidad
+                    <span class="text-overline">Actualidad</span>
                   </button>
                 </h3>
                 <div
@@ -302,13 +320,13 @@
                   aria-labelledby="headingThree"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <p>
                     Ahora nuestros clientes objetivos no son sólo los de nuestro
                     pueblo, sino que logramos una
                     <strong>fidelidad</strong> con amigos de todo el país. A
                     futuro tenemos planeado ingresar en el mundo del diseño y
                     fabricación de prendas propias.
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>
@@ -316,11 +334,13 @@
           <div
             class="about__icons col-md-3 col-lg-4 d-flex flex-md-column justify-content-center align-items-center flex-wrap"
             data-aos="fade-left"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
           >
             <img
               src="./assets/img/logo.svg"
               alt="Logo de la tienda StreetWear en color blanco y amarillo"
+              width="100%"
+              height="100%"
             />
             <i class="fas fa-info"></i>
           </div>
@@ -328,34 +348,70 @@
       </section>
 
       <section id="contact" class="contact container">
-        <article
-          class="d-flex justify-content-center align-items-center flex-wrap"
-          data-aos="fade-up"
-          data-aos-duration="3000"
+        <div
+          class="row justify-content-between justify-content-center align-items-center"
         >
-          <h2 class="title-primary vertical">Contactános</h2>
-          <form class="form__paper" data-aos="zoom-in" data-aos-duration="3000">
-            <div class="input__box">
-              <label for="name" class="form__label">Nombre y Apellido</label>
-              <input type="text" id="name" class="form__input" required="" />
+          <article
+            class="contact__form col-lg-6 d-flex justify-content-center align-items-center mb-5 mb-lg-0"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h2 class="title-primary vertical">Contactános</h2>
+            <form
+              class="form__paper"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <div class="input__box">
+                <label for="name" class="form__label">Nombre y Apellido</label>
+                <input type="text" id="name" class="form__input" required="" />
+              </div>
+              <div class="input__box">
+                <label for="email" class="form__label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form__input"
+                  required=""
+                />
+              </div>
+              <div class="input__box">
+                <label for="message" class="form__label">Mensaje</label>
+                <textarea
+                  id="message"
+                  class="form__input"
+                  rows="6"
+                  column="10"
+                  required=""
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-principal">
+                <i class="fa fa-paper-plane"></i> Enviar
+              </button>
+            </form>
+          </article>
+
+          <article
+            class="contact__location col-lg-5 d-flex justify-content-center align-items-center mt-5 mt-lg-0"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="iframe__container">
+              <div class="iframe__box">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2024.4648465779292!2d-63.0508337415102!3d-31.421551452447495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94334dd9def7613f%3A0xda264072985ac5f3!2sRivadavia%20286%2C%20X2434%20Arroyito%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1649901013386!5m2!1ses-419!2sar"
+                  title="Ubicacion"
+                  width="100%"
+                  height="100%"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <span></span>
+              </div>
             </div>
-            <div class="input__box">
-              <label for="email" class="form__label">Email</label>
-              <input type="email" id="email" class="form__input" required="" />
-            </div>
-            <div class="input__box">
-              <label for="message" class="form__label">Mensaje</label>
-              <textarea
-                id="message"
-                class="form__input"
-                rows="6"
-                column="10"
-                required=""
-              ></textarea>
-            </div>
-            <input type="submit" value="Enviar" class="btn-principal" />
-          </form>
-        </article>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -414,6 +470,7 @@
       </div>
     </footer>
   </body>
+
   <script src="./assets/js/aos.js"></script>
   <script>
     AOS.init();

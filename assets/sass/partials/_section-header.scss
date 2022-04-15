@@ -7,12 +7,16 @@
     margin: 1rem 0;
     font-size: 1.7em;
 
-    li a {
-      text-decoration: underline;
-    }
-
-    .breadcrumb__divider {
-      margin: 0 0.2rem;
+    li:not(:last-child) {
+      margin-right: 0.5rem;
+      &::after {
+        content: ">";
+        position: relative;
+        right: -0.5rem;
+      }
+      a {
+        text-decoration: underline;
+      }
     }
   }
 }

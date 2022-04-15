@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/aos.css" />
   </head>
   <body class="grid-rows-3 bg-light">
     <header class="bg-bricks">
@@ -26,6 +27,8 @@
             <img
               src="../img/logo.svg"
               alt="Logo de la tienda StreetWear, en color blanco y amarillo"
+              width="100%"
+              height="100%"
             />
           </picture>
         </a>
@@ -92,7 +95,6 @@
             <h1 class="title-primary">Productos</h1>
             <ol class="breadcrumb">
               <li><a href="../../index.html">Inicio</a></li>
-              <span class="breadcrumb__divider">></span>
               <li>Productos</li>
             </ol>
           </div>
@@ -169,12 +171,14 @@
 
         <div
           class="products__list d-flex justify-content-evenly justify-content-md-start"
+          data-aos="fade-right"
+          data-aos-duration="1000"
         >
           <article class="product__card">
             <a href="./product.html">
               <div class="product__card__img">
                 <img
-                  src="../img/shirt yellow.jpg"
+                  src="../img/shirt-yellow.webp"
                   alt="Hombre parado con las manos en los bolsillos traseros, vistiendo una remera negra con el texto Phenomenally Black"
                 />
               </div>
@@ -196,7 +200,7 @@
             <a href="./product.html">
               <div class="product__card__img">
                 <img
-                  src="../img/tshirt 2.jpg"
+                  src="../img/tshirt-2.webp"
                   alt="Hombre parado con las manos en el bolsillo, vistiendo una remera blanca con un texto en el medio"
                 />
               </div>
@@ -218,7 +222,7 @@
             <a href="./product.html">
               <div class="product__card__img">
                 <img
-                  src="../img/buzo.jpg"
+                  src="../img/buzo.webp"
                   alt="Hombre parado con las manos en el bolsillo, mirando hacia abajo, vistiendo un buzo negro con unas letras chinas en el centro del mismo"
                 />
               </div>
@@ -242,7 +246,7 @@
             <a href="./product.html">
               <div class="product__card__img">
                 <img
-                  src="../img/campera.jpg"
+                  src="../img/campera.webp"
                   alt="Hombre de perfil, mirando hacia el frente, con las manos en el bolsillo, vistiendo una campera de jean azul claro"
                 />
               </div>
@@ -324,5 +328,10 @@
       </div>
     </footer>
   </body>
+
+  <script src="../js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="../js/bootstrap.bundle.min.js"></script>
 </html>
