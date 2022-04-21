@@ -21,6 +21,21 @@
     border: none;
     outline: none;
   }
+
+  // SCROLL BAR
+  &::-webkit-scrollbar {
+    width: 1rem;
+    background: $black;
+
+    &-thumb {
+      background: $primary;
+      border-radius: 1px;
+
+      &:hover {
+        background: #ffda07cf;
+      }
+    }
+  }
 }
 
 /*   GLOBALS  */
@@ -31,7 +46,6 @@ html {
   scroll-padding-top: 7rem;
   scroll-behavior: smooth;
 }
-
 h1,
 h2,
 h3,
@@ -121,7 +135,6 @@ select {
     box-shadow: none;
   }
 }
-
 main {
   min-height: calc(100vh - 75.13px);
 }

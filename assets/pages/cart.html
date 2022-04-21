@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="stylesheet" href="../css/aos.css" />
   </head>
-  <body class="grid-rows-4">
+  <body>
     <header class="bg-bricks">
       <nav class="navbar container flex-row navbar-expand-lg">
         <a href="../../index.html">
@@ -91,6 +91,7 @@
         data-aos-duration="1000"
       >
         <h1 class="title-primary">Iniciar Compra</h1>
+
         <div class="row justify-content-between w-100">
           <article class="cart__data col-md-6 flex-column">
             <div id="accordionData">
@@ -161,13 +162,13 @@
                     <div class="flex-row jc-between">
                       <input
                         type="number"
-                        name="codpostal"
+                        name="postalcode"
                         class="form__input"
                         placeholder="Cód. Postal"
                         required
                       />
-                      <select name="provincia" class="form__input" required>
-                        <option value="cba" selected disabled>Provincia</option>
+                      <select name="province" class="form__input" required>
+                        <option value="" selected disabled>Provincia</option>
                         <option value="cba">Córdoba</option>
                         <option value="bsas">Buenos Aires</option>
                         <option value="stafe">Santa Fe</option>
@@ -398,9 +399,11 @@
             </div>
           </div>
           <div class="footer__logo flex-column">
-            <span>STREET</span><span>WEAR</span>
+            <span>STREET</span>
+            <span>WEAR</span>
           </div>
           <h4>&copy; 2022 Derechos Reservados</h4>
+
           <a href="#" aria-label="Ir al comienzo de la página"
             ><i class="fas fa-arrow-up"></i
           ></a>
@@ -408,7 +411,7 @@
 
         <div class="footer__social flex-row">
           <a
-            href="#"
+            href="https://www.facebook.com"
             class="fab fa-facebook"
             target="_blank"
             aria-label="Facebook"
@@ -420,7 +423,7 @@
             aria-label="Instagram"
           ></a>
           <a
-            href="#"
+            href="https://www.twitter.com"
             class="fab fa-twitter"
             target="_blank"
             aria-label="Twitter"

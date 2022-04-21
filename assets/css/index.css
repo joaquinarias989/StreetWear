@@ -17,6 +17,14 @@
     box-sizing: border-box;
     border: none;
     outline: none; }
+  *::-webkit-scrollbar {
+    width: 1rem;
+    background: #000; }
+    *::-webkit-scrollbar-thumb {
+      background: #ffda07;
+      border-radius: 1px; }
+      *::-webkit-scrollbar-thumb:hover {
+        background: #ffda07cf; }
 
 /*   GLOBALS  */
 html {
