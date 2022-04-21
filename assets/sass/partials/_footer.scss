@@ -9,11 +9,6 @@
     align-items: center;
     flex-wrap: wrap;
 
-    h4 {
-      font-size: inherit;
-      text-align: center;
-    }
-
     i.fa-money-bill-alt {
       transform: rotate(-5deg);
     }
@@ -26,6 +21,10 @@
       align-items: center;
       gap: 0.5rem;
 
+      strong {
+        font-size: inherit;
+        text-align: center;
+      }
       .icons {
         gap: 1rem;
         font-size: 1.1em;
@@ -37,6 +36,10 @@
       line-height: 1em;
       font-weight: bold;
       font-size: 1.1em;
+    }
+
+    p {
+      font-weight: bold;
     }
 
     &::after {

@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/aos.css" />
   </head>
   <body class="bg-bricks">
     <header class="bg-bricks">
@@ -89,7 +90,12 @@
     </header>
 
     <main>
-      <section id="login" class="login container">
+      <section
+        id="login"
+        class="login container"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <h1 class="title-primary">Iniciar Sesión</h1>
         <div class="row justify-content-between mt-5">
           <div class="col-md-7 col-lg-6">
@@ -130,54 +136,55 @@
             <i class="fas fa-hand-peace"></i>
           </div>
         </div>
-        <div
-          class="modal fade"
-          id="modalRecover"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="title-primary w-100" id="exampleModalLabel">
-                  Recuperar contraseña
-                </h2>
-              </div>
-              <form action="">
-                <div class="modal-body">
-                  <div class="input__box">
-                    <label for="email-recover" class="form__label">Email</label>
-                    <input
-                      type="email"
-                      id="email-recover"
-                      class="form__input"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="reset"
-                    class="btn-secundario"
-                    data-bs-dismiss="modal"
-                    aria-label="Cerrar"
-                  >
-                    <i class="fa fa-times"></i>Cancelar
-                  </button>
-                  <button
-                    type="submit"
-                    class="btn-principal"
-                    aria-label="Enviar correo"
-                  >
-                    <i class="fa fa-paper-plane"></i> Enviar correo
-                  </button>
-                </div>
-              </form>
+      </section>
+
+      <div
+        class="modal fade"
+        id="modalRecover"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="title-primary w-100" id="exampleModalLabel">
+                Recuperar contraseña
+              </h2>
             </div>
+            <form action="">
+              <div class="modal-body">
+                <div class="input__box">
+                  <label for="email-recover" class="form__label">Email</label>
+                  <input
+                    type="email"
+                    id="email-recover"
+                    class="form__input"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="reset"
+                  class="btn-secundario"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar"
+                >
+                  <i class="fa fa-times"></i>Cancelar
+                </button>
+                <button
+                  type="submit"
+                  class="btn-principal"
+                  aria-label="Enviar correo"
+                >
+                  <i class="fa fa-paper-plane"></i> Enviar correo
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer class="footer">
@@ -188,7 +195,7 @@
           ></a>
 
           <div class="footer__payment flex-column">
-            <h4>Todos los métodos de pago</h4>
+            <strong>Todos los métodos de pago</strong>
             <div class="icons flex-row">
               <i class="fa fa-credit-card"></i>
               <i class="fab fa-bitcoin"></i>
@@ -199,7 +206,7 @@
             <span>STREET</span>
             <span>WEAR</span>
           </div>
-          <h4>&copy; 2022 Derechos Reservados</h4>
+          <p>&copy; 2022 Derechos Reservados</p>
 
           <a href="#" aria-label="Ir al comienzo de la página"
             ><i class="fas fa-arrow-up"></i
@@ -235,5 +242,10 @@
       </div>
     </footer>
   </body>
+
+  <script src="../js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="../js/bootstrap.bundle.min.js"></script>
 </html>
