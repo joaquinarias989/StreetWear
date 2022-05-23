@@ -5,7 +5,6 @@
     @include flex(null, start, center, 0.5rem);
     flex-wrap: wrap;
     margin: 1rem 0;
-    font-size: 1.7em;
 
     li:not(:last-child) {
       margin-right: 0.5rem;

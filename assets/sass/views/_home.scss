@@ -46,7 +46,7 @@ main.bg-bricks {
   padding: 5rem 0;
 
   &__icons {
-    font-size: 7.5em;
+    font-size: 3.75em;
     gap: 2rem;
 
     .fa-shopping-cart {
@@ -81,7 +81,6 @@ main.bg-bricks {
       grid-column-gap: 2rem;
       grid-row-gap: 3rem;
       background: $light-color;
-      font-size: 1.8em;
       padding: 3rem 5rem;
       margin-right: 3rem;
       box-shadow: 10px 10px 8px #1f1f1f7e;
@@ -109,10 +108,10 @@ main.bg-bricks {
           font-family: $font-secondary;
           flex-basis: 15%;
           font-weight: bold;
-          font-size: 1.8em;
           position: relative;
           text-align: center;
           z-index: 10;
+          font-size: 1.9em;
 
           &::after {
             content: "";
@@ -183,7 +182,6 @@ main.bg-bricks {
     .accordion__paper {
       width: 100%;
       background: $light-color;
-      font-size: 1.7em;
       padding: 3rem 5rem;
       box-shadow: 10px 10px 8px #1f1f1f7e;
       clip-path: polygon(
@@ -217,11 +215,10 @@ main.bg-bricks {
 
       h3 {
         position: relative;
-        font-size: 1.25em;
 
         .accordion-button {
           background: transparent;
-          font-size: 1em;
+          font-size: 1.25em;
           padding: 0.5rem 0;
           color: $black;
           position: relative;
@@ -250,7 +247,7 @@ main.bg-bricks {
 
   &__icons {
     color: $primary;
-    font-size: 5em;
+    font-size: 3.5em;
     gap: 2rem;
 
     img {
@@ -308,7 +305,6 @@ main.bg-bricks {
       .btn-principal {
         width: 100%;
         margin-bottom: 2rem;
-        font-size: 1.8em;
       }
     }
 

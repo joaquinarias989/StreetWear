@@ -21,21 +21,6 @@
     border: none;
     outline: none;
   }
-
-  // SCROLL BAR
-  &::-webkit-scrollbar {
-    width: 1rem;
-    background: $black;
-
-    &-thumb {
-      background: $primary;
-      border-radius: 1px;
-
-      &:hover {
-        background: #ffda07cf;
-      }
-    }
-  }
 }
 
 /*   GLOBALS  */
@@ -45,6 +30,16 @@ html {
   line-height: 1.15;
   scroll-padding-top: 7rem;
   scroll-behavior: smooth;
+}
+body {
+  background-color: $light-color;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: clamp(1.7rem, 1.75rem, 2vw);
+}
+main {
+  min-height: calc(100vh - 75.13px);
 }
 h1,
 h2,
@@ -81,18 +76,12 @@ img {
 button {
   background: none;
   cursor: pointer;
+  font-size: inherit;
 }
-input {
-  background: transparent;
-
-  &:-webkit-autofill,
-  &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus {
-    box-shadow: 0 0 0px 1000px #fffbdb inset;
-  }
-}
+input,
 select {
-  background: none;
+  background: transparent;
+  font-size: inherit;
 
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -100,6 +89,7 @@ select {
     box-shadow: 0 0 0px 1000px #fffbdb inset;
   }
 }
+
 .form-check-input {
   transition: all 0.1s ease-in-out;
 
@@ -108,10 +98,6 @@ select {
   }
 }
 .modal-content {
-  font-size: 1.8em;
-  button {
-    font-size: 1em;
-  }
   .btn-secundario {
     border-radius: 2px;
     background: #a9a9a9;
@@ -121,7 +107,6 @@ select {
   }
 }
 .accordion-button {
-  font-size: 1em;
   font-weight: bold;
   padding: 0.5rem 0;
   color: $black;
@@ -135,9 +120,21 @@ select {
     box-shadow: none;
   }
 }
-main {
-  min-height: calc(100vh - 75.13px);
-}
 .row {
   --bs-gutter-x: 0;
+}
+
+// Scroll Bar
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background: $black;
+
+  &-thumb {
+    background: $primary;
+    border-radius: 1rem;
+
+    &:hover {
+      background: #ffda07cf;
+    }
+  }
 }

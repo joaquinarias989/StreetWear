@@ -3,7 +3,6 @@
   overflow: visible;
 
   &__header {
-    font-size: 2em;
     margin-bottom: 3rem;
 
     h2 {
@@ -28,14 +27,12 @@
     }
     .product__ship {
       input {
-        font-size: 0.9em;
         border-bottom: 4px solid $primary;
         padding: 0.1rem;
         text-align: right;
         width: 100%;
       }
       button {
-        font-size: 1em;
         padding: 0.5rem;
       }
     }
@@ -53,7 +50,7 @@
 
     .product__details {
       gap: 1rem;
-      font-size: 1.8em;
+      font-size: 1.1em;
 
       .product__description {
         position: relative;
@@ -78,7 +75,6 @@
         border-radius: 2px;
         padding: 0.5rem;
         font-weight: bold;
-        font-size: 0.9em;
       }
 
       .product__quantity {
@@ -116,10 +112,6 @@
             width: 100%;
           }
         }
-      }
-
-      .btn-principal {
-        font-size: 1em;
       }
     }
   }

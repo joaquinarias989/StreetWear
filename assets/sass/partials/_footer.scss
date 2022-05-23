@@ -2,7 +2,7 @@
   background: $primary;
   box-shadow: 0 5px 30px rgb(255, 217, 0);
   padding: 4rem 0;
-  font-size: 1.9em;
+  font-size: 1.1em;
 
   &__info {
     justify-content: space-between;
@@ -22,18 +22,17 @@
       gap: 0.5rem;
 
       strong {
-        font-size: inherit;
         text-align: center;
       }
       .icons {
         gap: 1rem;
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
     }
 
     .footer__logo {
       align-items: center;
-      line-height: 1em;
+      line-height: 2rem;
       font-weight: bold;
       font-size: 1.1em;
     }

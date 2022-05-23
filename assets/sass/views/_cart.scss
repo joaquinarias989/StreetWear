@@ -4,11 +4,9 @@
 
   > .row {
     padding: 5rem 0;
-    font-size: 1.8em;
 
     @include breakpoint(md) {
       flex-direction: column-reverse;
-      font-size: 1.7em;
       gap: 8rem;
     }
   }
@@ -16,10 +14,9 @@
   &__data {
     h2 {
       position: relative;
-      font-size: 1.3em;
     }
     .accordion-button {
-      font-size: 1em;
+      font-size: 1.1em;
       font-weight: bold;
       padding: 0.5rem 0;
       color: $black;
@@ -72,11 +69,6 @@
 
     .form__input {
       margin: 0.5rem 0;
-      font-size: 1em;
-    }
-
-    .btn-principal {
-      font-size: 1em;
     }
 
     @include breakpoint(sm) {
@@ -154,7 +146,7 @@
     .cart__total h2 {
       position: relative;
       padding: 0 1.5rem;
-      font-size: 1.6em;
+      font-size: 1.5em;
     }
   }
 }

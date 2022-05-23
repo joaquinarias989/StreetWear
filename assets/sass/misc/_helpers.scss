@@ -48,7 +48,7 @@
 .title-primary {
   display: inline-block;
   background: $primary;
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: bold;
   text-align: center;
   padding: 0.2rem 4rem;
@@ -56,14 +56,14 @@
 .title-secondary {
   display: inline-block;
   background: $white;
-  font-size: 3.9em;
+  font-size: 3.9rem;
   font-weight: bold;
   text-align: center;
   padding: 0.2rem 3rem;
 }
 .title-underlined {
   display: inline-block;
-  font-size: 4.5em;
+  font-size: clamp(4rem, 4.3rem, 5vw);
   position: relative;
   padding-right: 3rem;
 
@@ -113,7 +113,6 @@
   color: $black;
   border-radius: 2px;
   padding: 0.8rem 2rem;
-  font-size: 1.8em;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -129,7 +128,6 @@
   color: $black;
   border-radius: 0;
   padding: 0.8rem 2rem;
-  font-size: 1.8em;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -150,15 +148,11 @@
 .input__box {
   margin: 2rem 0;
 }
-.form__label {
-  font-size: 1.75em;
-}
 .form__input {
   width: 100%;
   background: transparent;
   border-bottom: 3px solid $primary;
   padding: 0.3rem 0.1rem;
-  font-size: 1.7em;
   resize: none;
   transition: all 0.5s ease-in-out;
 
@@ -205,7 +199,7 @@
 
     .product__card__title {
       width: 100%;
-      font-size: 2.3em;
+      font-size: 2.3rem;
       position: relative;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -226,7 +220,7 @@
     }
 
     .product__card__price {
-      font-size: 2em;
+      font-size: 2.1rem;
       margin: 0.5rem 0 1rem 0;
 
       span {
@@ -246,13 +240,13 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 0.5rem;
-        font-size: 1.9em;
+        font-size: 2.1rem;
         font-weight: bold;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         i {
-          font-size: 1.15em;
+          font-size: 1.1em;
           transition: all 0.3s ease-in-out;
         }
 
@@ -271,7 +265,6 @@
     background: $accent;
     color: $white;
     padding: 0.5rem 1rem;
-    font-size: 1.7em;
     font-weight: bold;
     letter-spacing: 1px;
     box-shadow: 4px 5px 0px #041922;
@@ -279,7 +272,6 @@
 
     @include breakpoint(sm) {
       right: -5px;
-      font-size: 1.4em;
     }
   }
 
@@ -302,9 +294,6 @@
 }
 
 @include breakpoint(md) {
-  .title-underlined {
-    font-size: 4em;
-  }
   .title-primary {
     width: 100%;
     padding: 0.2rem 0;
