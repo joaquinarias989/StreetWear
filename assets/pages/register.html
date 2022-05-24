@@ -75,13 +75,123 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="cart-link">
               <a
                 href="cart.html"
-                class="menu__link"
+                class="menu__link me-0"
                 aria-label="Carrito de compras"
-                ><i class="fas fa-shopping-bag text-white"></i
-              ></a>
+                ><i class="fas fa-shopping-bag text-white"></i></a
+              ><span class="cart-quantity"></span>
+              <div class="cart__resume__nav">
+                <div class="cart__resume__products flex-column">
+                  <div class="cart__product">
+                    <div class="cart__product__img">
+                      <img src="../img/shirt-yellow.webp" />
+                    </div>
+                    <div class="cart__product__info">
+                      <h3 class="cart__product__title text-underlined">
+                        Nombre del Producto
+                      </h3>
+                      <p class="cart__product__details">Talle S, Amarillo</p>
+                      <div class="d-flex algn-items-center jc-between gap-1">
+                        <p>
+                          Cantidad:
+                          <span class="cart__product__quantity">2</span>
+                        </p>
+                        <div class="d-flex algn-items-center btn-group">
+                          <button id="addOne" class="btn-principal">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                          <button id="reduceOne" class="btn-secundario d-none">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <button id="removeProd" class="btn-remove">
+                            <i class="fa fa-trash"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <h3 class="cart__product__price">$ 3000</h3>
+                    </div>
+                  </div>
+                  <div class="cart__product">
+                    <div class="cart__product__img">
+                      <img src="../img/campera.webp" />
+                    </div>
+                    <div class="cart__product__info">
+                      <h3 class="cart__product__title text-underlined">
+                        Nombre del Producto
+                      </h3>
+                      <p class="cart__product__details">Talle M, Negro</p>
+                      <div class="d-flex algn-items-center jc-between gap-1">
+                        <p>
+                          Cantidad:
+                          <span class="cart__product__quantity">1</span>
+                        </p>
+                        <div class="d-flex algn-items-center btn-group">
+                          <button id="addOne" class="btn-principal">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                          <button id="reduceOne" class="btn-secundario d-none">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <button id="removeProd" class="btn-remove">
+                            <i class="fa fa-trash"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <h3 class="cart__product__price">$ 5750</h3>
+                    </div>
+                  </div>
+                  <template id="product-cart">
+                    <div class="cart__product">
+                      <div class="cart__product__img">
+                        <img alt="" />
+                      </div>
+                      <div class="cart__product__info">
+                        <h3 class="cart__product__title text-underlined"></h3>
+                        <p class="cart__product__details"></p>
+                        <div class="d-flex algn-items-center jc-between gap-1">
+                          <p>
+                            Cantidad:
+                            <span class="cart__product__quantity"></span>
+                          </p>
+                          <div class="d-flex algn-items-center btn-group">
+                            <button id="addOne" class="btn-principal">
+                              <i class="fa fa-plus"></i>
+                            </button>
+                            <button
+                              id="reduceOne"
+                              class="btn-secundario d-none"
+                            >
+                              <i class="fa fa-minus"></i>
+                            </button>
+                            <button id="removeProd" class="btn-remove">
+                              <i class="fa fa-trash"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <h3 class="cart__product__price"></h3>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+                <div class="cart__subtotal flex-column">
+                  <h4 class="flex-row jc-between algn-items-center">
+                    Subtotal <span id="subtotal">$ 11750</span>
+                  </h4>
+                  <h4 class="flex-row jc-between algn-items-center">
+                    Costo de Envío <span id="ship-cart">$ 475</span>
+                  </h4>
+                </div>
+                <div
+                  class="cart__total flex-row flex-wrap jc-between algn-items-center"
+                >
+                  <h2 class="position-relative text-overline">TOTAL</h2>
+                  <h2 class="position-relative text-overline" id="total">
+                    $ 12225
+                  </h2>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -164,6 +274,12 @@
         </div>
       </section>
     </main>
+
+    <dialog class="modal-alert">
+      <i class="fa fa-info"></i>
+      <h3></h3>
+      <button class="btn-principal">OK</button>
+    </dialog>
 
     <footer class="footer">
       <div class="container">

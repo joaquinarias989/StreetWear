@@ -136,7 +136,20 @@
     background: $primary;
   }
 }
+.btn-remove {
+  @include flex(null, center, center, 0.5rem);
+  background: #ca1b1b;
+  color: $white;
+  border-radius: 2px;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
 
+  &:hover {
+    background: #ed6161;
+  }
+}
 /*     FORMS    */
 
 .form__paper {
@@ -240,7 +253,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 0.5rem;
-        font-size: 2.1rem;
+        font-size: 1.9rem;
         font-weight: bold;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
@@ -290,6 +303,53 @@
     .offer {
       animation: float 0.4s ease-in-out infinite alternate;
     }
+  }
+}
+
+/*     MODAL ALERT     */
+.modal-alert {
+  min-width: 40rem;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: $white;
+  padding: 3rem;
+  clip-path: polygon(
+    50% 0,
+    99% 0,
+    100% 17%,
+    99% 56%,
+    100% 97%,
+    93% 100%,
+    1% 100%,
+    0 59%,
+    0 25%,
+    0 1%
+  );
+
+  i {
+    font-size: 2em;
+    color: #ffda07;
+  }
+
+  &[open] {
+    @include flex(column, center, center, 2rem);
+  }
+  &::backdrop {
+    background-color: #00000095;
+  }
+}
+
+/*     TOASTIFY        */
+.toastify {
+  &.info {
+    padding: 0.7rem 1.2rem;
+    background: $primary;
+    color: #000;
+    font-weight: bold;
+    max-width: 100%;
+    border-radius: 0;
   }
 }
 

@@ -74,9 +74,12 @@
               </ul>
             </li>
             <li>
-              <a href="cart.html" class="menu__link menu__link--active"
-                ><i class="fas fa-shopping-bag text-white"></i
-              ></a>
+              <a
+                href="cart.html"
+                class="menu__link menu__link--active me-0"
+                aria-label="Carrito de compras"
+                ><i class="fas fa-shopping-bag text-white"></i></a
+              ><span class="cart-quantity"></span>
             </li>
           </ul>
         </div>
@@ -116,11 +119,11 @@
                 >
                   <div class="flex-row jc-between algn-items-center mt-4">
                     <p>Correo Argentino - Envío a Domicilio</p>
-                    <span class="text-overline">$ 475</span>
+                    <span class="text-overline" id="ship-data">$ 475</span>
                   </div>
                 </div>
               </div>
-              <form action="#">
+              <form id="formPurchase" action="#">
                 <div class="cart__personal mt-5">
                   <h2 class="text-leftline mb-1" id="panelsStayOpen-headingTwo">
                     <button
@@ -146,17 +149,17 @@
                       >
                     </p>
                     <input
-                      type="email"
-                      name="email"
-                      class="form__input"
-                      placeholder="Email"
-                      required
-                    />
-                    <input
                       type="text"
                       name="name"
                       class="form__input"
                       placeholder="Nombre y Apellido"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      class="form__input"
+                      placeholder="Email"
                       required
                     />
                     <div class="flex-row jc-between">
@@ -188,7 +191,7 @@
                       placeholder="Departamento (opcional)"
                     />
                     <input
-                      type="number"
+                      type="tel"
                       name="phone"
                       class="form__input"
                       placeholder="Télefono"
@@ -252,47 +255,108 @@
             class="cart__resume ps-md-5 ps-xl-0 col-md-6 col-xl-4 flex-column"
           >
             <div class="cart__resume__products flex-column">
-              <div class="cart__product flex-row algn-items-center">
+              <div class="cart__product">
                 <div class="cart__product__img">
-                  <img
-                    src="../img/shirt-yellow.webp"
-                    alt="Hombre parado con las manos en los bolsillos traseros, vistiendo una remera negra con el texto Phenomenally Black"
-                  />
+                  <img src="../img/shirt-yellow.webp" />
                 </div>
-                <div class="cart__product__info flex-column">
-                  <h3 class="text-underlined">Nombre del producto</h3>
-                  <p>Talle S, Negro</p>
-                  <h3>$ 1000</h3>
+                <div class="cart__product__info">
+                  <h3 class="cart__product__title text-underlined">
+                    Nombre del Producto
+                  </h3>
+                  <p class="cart__product__details">Talle S, Amarillo</p>
+                  <div class="d-flex algn-items-center jc-between gap-1">
+                    <p>
+                      Cantidad:
+                      <span class="cart__product__quantity">2</span>
+                    </p>
+                    <div class="d-flex algn-items-center btn-group">
+                      <button id="addOne" class="btn-principal">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                      <button id="reduceOne" class="btn-secundario d-none">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                      <button id="removeProd" class="btn-remove">
+                        <i class="fa fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h3 class="cart__product__price">$ 3000</h3>
                 </div>
               </div>
-              <div class="cart__product flex-row algn-items-center">
+              <div class="cart__product">
                 <div class="cart__product__img">
-                  <img
-                    src="../img/buzo.webp"
-                    alt="Hombre parado con las manos en el bolsillo, mirando hacia abajo, vistiendo un buzo negro con unas letras chinas en el centro del mismo"
-                  />
+                  <img src="../img/campera.webp" />
                 </div>
-                <div class="cart__product__info flex-column">
-                  <h3 class="text-underlined">Nombre del producto</h3>
-                  <p>Talle S, Negro</p>
-                  <h3>$ 1000</h3>
+                <div class="cart__product__info">
+                  <h3 class="cart__product__title text-underlined">
+                    Nombre del Producto
+                  </h3>
+                  <p class="cart__product__details">Talle M, Negro</p>
+                  <div class="d-flex algn-items-center jc-between gap-1">
+                    <p>
+                      Cantidad:
+                      <span class="cart__product__quantity">1</span>
+                    </p>
+                    <div class="d-flex algn-items-center btn-group">
+                      <button id="addOne" class="btn-principal">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                      <button id="reduceOne" class="btn-secundario d-none">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                      <button id="removeProd" class="btn-remove">
+                        <i class="fa fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h3 class="cart__product__price">$ 5750</h3>
                 </div>
               </div>
+              <template id="product-cart">
+                <div class="cart__product">
+                  <div class="cart__product__img">
+                    <img src="../img/buzo-2.webp" />
+                  </div>
+                  <div class="cart__product__info">
+                    <h3 class="cart__product__title text-underlined"></h3>
+                    <p class="cart__product__details"></p>
+                    <div class="d-flex algn-items-center jc-between gap-1">
+                      <p>
+                        Cantidad:
+                        <span class="cart__product__quantity"></span>
+                      </p>
+                      <div class="d-flex algn-items-center btn-group">
+                        <button id="addOne" class="btn-principal">
+                          <i class="fa fa-plus"></i>
+                        </button>
+                        <button id="reduceOne" class="btn-secundario d-none">
+                          <i class="fa fa-minus"></i>
+                        </button>
+                        <button id="removeProd" class="btn-remove">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="cart__product__price"></h3>
+                  </div>
+                </div>
+              </template>
             </div>
 
             <div class="cart__subtotal flex-column">
               <h4 class="flex-row jc-between algn-items-center">
-                Subtotal <span>$ 2000</span>
+                Subtotal <span id="subtotal">$ 11750</span>
               </h4>
               <h4 class="flex-row jc-between algn-items-center">
-                Costo de Envío <span>$ 475</span>
+                Costo de Envío <span id="ship-cart">$ 475</span>
               </h4>
             </div>
             <div
               class="cart__total flex-row flex-wrap jc-between algn-items-center"
             >
               <h2 class="text-overline">TOTAL</h2>
-              <h2 class="text-overline">$ 2475</h2>
+              <h2 class="text-overline" id="total">$ 12225</h2>
             </div>
           </article>
         </div>
@@ -382,9 +446,37 @@
               </div>
             </a>
           </article>
+
+          <template id="product-card">
+            <article class="product__card">
+              <a>
+                <div class="product__card__img">
+                  <img alt="" />
+                </div>
+                <div class="product__card__info">
+                  <h4 class="product__card__title"></h4>
+                  <h4 class="product__card__price"></h4>
+                  <div class="product__card__btn flex-row">
+                    <button
+                      class="btn-cart"
+                      aria-label="Agregar producto al carrito"
+                    >
+                      Agregar al carrito <i class="fa fa-cart-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </template>
         </div>
       </div>
     </section>
+
+    <dialog class="modal-alert">
+      <i class="fa fa-info"></i>
+      <h3></h3>
+      <button class="btn-principal">OK</button>
+    </dialog>
 
     <footer class="footer">
       <div class="container">

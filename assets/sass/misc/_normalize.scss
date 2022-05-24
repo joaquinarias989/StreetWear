@@ -127,8 +127,7 @@ select {
 // Scroll Bar
 ::-webkit-scrollbar {
   width: 0.7rem;
-  background: $black;
-
+  background: transparent;
   &-thumb {
     background: $primary;
     border-radius: 1rem;
