@@ -501,7 +501,7 @@ header {
       opacity: 1; }
   header .cart__resume__nav {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.961);
+    background-color: #fff;
     padding: 4rem;
     width: 45rem;
     top: 4rem;
@@ -517,14 +517,14 @@ header {
     header .cart__resume__nav .cart__resume__products .cart__product {
       font-size: 0.9em; }
     header .cart__resume__nav .cart__subtotal {
-      display: none; }
-    header .cart__resume__nav .cart__total {
       position: relative;
       margin-top: 4rem; }
-      header .cart__resume__nav .cart__total h2 {
+      header .cart__resume__nav .cart__subtotal h4 {
         font-size: 1.3em;
         padding: 0 1rem; }
-      header .cart__resume__nav .cart__total::before {
+        header .cart__resume__nav .cart__subtotal h4:last-child {
+          display: none; }
+      header .cart__resume__nav .cart__subtotal::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -534,6 +534,8 @@ header {
         width: 100%;
         border-radius: 1rem;
         height: 0.3rem; }
+    header .cart__resume__nav .cart__total {
+      display: none; }
 
 .footer {
   background: #ffda07;
